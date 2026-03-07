@@ -4,18 +4,15 @@
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   
-  --color-slate-850: #141d2e;
-  --color-slate-900: #0f172a;
-  --color-slate-950: #020617;
-  
-  --color-minang: #BE1E2D; /* A rich, deep red typical of Minang traditional fabrics */
-  --color-minang-light: #D92537;
-  --color-minang-dark: #911A24;
+  --color-primary: #13A89E;
+  --color-secondary: #0F75BC;
+  --color-bg-main: #0E111D;
+  --color-tertiary: #FFFFFF;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
+  --background: var(--color-bg-main);
+  --foreground: var(--color-tertiary);
 }
 
 body {
@@ -23,6 +20,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
+  color-scheme: dark;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -30,15 +28,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .circuit-pattern {
-  background-image: radial-gradient(var(--color-slate-850) 1px, transparent 1px), radial-gradient(var(--color-slate-850) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: 0 0, 20px 20px;
-  opacity: 0.1;
 }
 
 .text-gradient {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, #BE1E2D, #D92537);
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 }

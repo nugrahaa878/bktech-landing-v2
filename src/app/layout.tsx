@@ -15,7 +15,7 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Kita Tech | Software House untuk UMKM Sumatera Barat",
+  title: "BKTech | Software House untuk UMKM Sumatera Barat",
   description: "Dukungan Lokal untuk Kualitas Global. Kami membantu UMKM dan Pariwisata Sumatera Barat Go Digital dengan solusi yang profesional, aman, dan inovatif.",
 };
 
