@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Plus_Jakarta_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
-const headingFont = Bricolage_Grotesque({
-  variable: "--font-heading",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const bodyFont = Plus_Jakarta_Sans({
-  variable: "--font-body",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "BKTech | Software House untuk UMKM Sumatera Barat",
-  description: "Dukungan Lokal untuk Kualitas Global. Kami membantu UMKM dan Pariwisata Sumatera Barat Go Digital dengan solusi yang profesional, aman, dan inovatif.",
+  title: "BKTech | Rekayasa Perangkat Lunak Sumatera Barat",
+  description: "Menghadirkan solusi digital yang presisi, andal, dan kultural untuk UMKM & pariwisata.",
 };
 
 export default function RootLayout({
@@ -26,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className="scroll-smooth">
-      <body
-        className={`${bodyFont.variable} ${headingFont.variable} font-body bg-white text-slate-900 antialiased overflow-x-hidden`}
-      >
+      <body className={`${poppins.variable} font-sans bg-offwhite-200 text-charcoal-900 antialiased overflow-x-hidden`}>
         {children}
       </body>
     </html>

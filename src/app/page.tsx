@@ -1,276 +1,288 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowUpRight, MessageCircleCode, CheckCircle2, ChevronRight, BarChart3, Database, Fingerprint, ArrowRight, Globe } from "lucide-react";
+import { ArrowRight, Code, ShieldCheck, Box, UserCheck, Smartphone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { ReactNode } from "react";
 
-const revealUp: Variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.25, 1, 0.3, 1] } }
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } }
 };
 
-const staggerWrap: Variants = {
+const staggerFade: Variants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-sand text-ulin selection:bg-gold selection:text-ulin-light overflow-hidden">
+    <main className="min-h-screen bg-offwhite-200 text-charcoal-900 selection:bg-terracotta selection:text-white">
+      {/* Background Grid Pattern */}
+      <div className="fixed inset-0 structural-grid opacity-50 z-0 pointer-events-none"></div>
 
-      {/* Header */}
-      <nav className="fixed top-0 w-full z-50 mix-blend-difference texture-stone px-6 md:px-12 py-6 flex justify-between items-center transition-all bg-white/10 backdrop-blur-md border-b border-ulin/5">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-ulin text-gold flex items-center justify-center clip-asymmetric font-heading font-black text-xl">
-            B
+      {/* Solid Navbar Navbar */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-offwhite-200/95 backdrop-blur-sm border-b border-charcoal-900/10 transition-all">
+        <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 relative z-10 group">
+            <Image
+              src="/logo-no-bg.png"
+              alt="BKTech Logo"
+              width={160}
+              height={40}
+              className="h-7 object-contain w-auto opacity-90 group-hover:opacity-100 transition-opacity invert"
+            />
+          </Link>
+          <div className="hidden md:flex items-center gap-10 text-sm font-medium text-charcoal-700 tracking-wide uppercase">
+            <Link href="#layanan" className="hover:text-terracotta transition-colors">Layanan Kami</Link>
+            <Link href="#klien" className="hover:text-terracotta transition-colors">Portofolio</Link>
+            <Link href="#tim" className="hover:text-terracotta transition-colors">Tentang Industri</Link>
           </div>
-          <span className="font-heading font-black text-2xl tracking-tight text-sand">BKTech</span>
-        </Link>
-
-        <div className="hidden md:flex gap-10 font-body font-medium text-sm text-stone">
-          <Link href="#expertise" className="hover:text-gold transition-colors">Expertise</Link>
-          <Link href="#philosophy" className="hover:text-gold transition-colors">Philosophy</Link>
-          <Link href="#legacy" className="hover:text-gold transition-colors">Legacy</Link>
+          <button className="bg-charcoal-900 text-white px-6 py-3 font-semibold text-sm transition-colors hover:bg-terracotta shadow-sm">
+            Diskusikan Proyek
+          </button>
         </div>
-
-        <button className="hidden md:flex items-center gap-2 bg-gradient-to-r from-forest to-forest-dark text-sand px-6 py-3 font-semibold text-sm hover:opacity-90 transition-opacity clip-asymmetric shadow-xl shadow-forest/20">
-          <MessageCircleCode size={18} className="text-gold" />
-          <span>WhatsApp Direct</span>
-        </button>
       </nav>
 
-      {/* Hero Section: Asymmetrical Overlaps */}
-      <section className="pt-32 lg:pt-48 pb-20 px-6 md:px-12 max-w-[1600px] mx-auto relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center relative">
+      <div className="relative z-10 pt-24 pb-0">
+        <div className="max-w-7xl mx-auto px-6">
 
-          {/* Main Typography Column */}
-          <motion.div initial="hidden" animate="visible" variants={staggerWrap} className="lg:col-span-7 z-20 xl:pr-12">
-            <motion.div variants={revealUp} className="inline-flex items-center gap-3 bg-stone px-4 py-2 mb-8 border-l-2 border-gold text-sm font-semibold text-stone-deep uppercase tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-gold"></span>
-              West Sumatra Engineering
-            </motion.div>
+          {/* Main Layout Grid Structure */}
+          <div className="border-x border-charcoal-900/10 min-h-screen pt-12 pb-24">
 
-            <motion.h1 variants={revealUp} className="text-5xl md:text-7xl xl:text-[5.5rem] font-heading font-black leading-[1.05] mb-8 text-ulin">
-              Precision <br />
-              <span className="text-forest">Architecture.</span><br />
-              Solid <span className="text-gradient-gold">Legacy.</span>
-            </motion.h1>
+            {/* Hero Section */}
+            <section className="px-6 md:px-12 grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+              <motion.div
+                initial="hidden" animate="visible" variants={staggerFade}
+                className="max-w-2xl py-12"
+              >
+                <motion.div variants={fadeUp} className="flex items-center gap-4 mb-8">
+                  <div className="h-px w-8 bg-terracotta"></div>
+                  <span className="uppercase tracking-widest text-terracotta text-xs font-semibold">
+                    West Sumatra Digital Foundry
+                  </span>
+                </motion.div>
 
-            <motion.p variants={revealUp} className="text-lg md:text-xl text-stone-deep max-w-xl mb-12 font-medium leading-relaxed">
-              Membangun infrastruktur digital korporat dengan asas <strong className="text-ulin font-bold">Kekeluargaan</strong> yang membumi, dieksekusi dengan <strong className="text-ulin font-bold">Profesionalisme</strong> yang tak tertandingi.
-            </motion.p>
+                <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-light leading-[1.15] mb-8 text-charcoal-900 tracking-tight">
+                  <strong className="font-semibold text-charcoal-900">Rekayasa Terukur.</strong> <br />
+                  Solusi Perangkat Lunak untuk Ruang Bisnis Modern.
+                </motion.h1>
 
-            <motion.div variants={revealUp} className="flex flex-col sm:flex-row gap-5 items-start">
-              <button className="texture-wood text-sand px-8 py-5 text-sm uppercase tracking-widest font-bold flex items-center gap-4 hover:shadow-2xl hover:shadow-ulin/30 transition-all clip-asymmetric group">
-                Mulai Kolaborasi <ArrowUpRight size={18} className="text-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </button>
-              <div className="flex items-center gap-4 px-6 py-5 cursor-pointer group">
-                <div className="w-10 h-10 rounded-full border border-stone-dark flex items-center justify-center group-hover:border-forest transition-colors">
-                  <ChevronRight size={18} className="text-stone-deep group-hover:text-forest" />
+                <motion.p variants={fadeUp} className="text-lg text-charcoal-700 leading-relaxed mb-12 max-w-lg">
+                  Keahlian rekayasa perangkat lunak berskala global, ditempa dengan pemahaman tajam akan ekosistem UMKM dan pariwisata di Sumatera Barat. Kami membangun infrastruktur digital yang solid dan dapat diandalkan.
+                </motion.p>
+
+                <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
+                  <button className="bg-terracotta hover:bg-terracotta-hover text-white px-8 py-4 font-medium text-sm transition-all flex items-center justify-center gap-3">
+                    Pelajari Layanan
+                    <ArrowRight size={16} />
+                  </button>
+                  <button className="bg-transparent border border-charcoal-900/20 text-charcoal-900 hover:border-charcoal-900 px-8 py-4 font-medium text-sm transition-all flex items-center justify-center">
+                    Lihat Portofolio
+                  </button>
+                </motion.div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="relative h-[600px] w-full"
+              >
+                {/* Structure Borders wrapping the image */}
+                <div className="absolute top-4 left-4 w-full h-full border border-charcoal-900/10 weave-bg z-0 hidden md:block"></div>
+                <div className="songket-border-left songket-border-top relative w-full h-full bg-charcoal-800 z-10 overflow-hidden shadow-2xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/bukittinggi_workspace.png"
+                    alt="Modern Software Engineer Workspace in Bukittinggi"
+                    className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-90 hover:opacity-100 transition-opacity duration-700 grayscale hover:grayscale-0"
+                  />
+                  {/* Subtle tint overlay to keep the grounded, monochromatic feel until hover */}
+                  <div className="absolute inset-0 bg-charcoal-900/20 mix-blend-multiply pointer-events-none hover:opacity-0 transition-opacity duration-700"></div>
                 </div>
-                <span className="font-semibold text-sm uppercase tracking-wider text-ulin group-hover:text-forest transition-colors">Eksplorasi Profil</span>
-              </div>
-            </motion.div>
-          </motion.div>
+              </motion.div>
+            </section>
 
-          {/* Overlapping Image Column */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="lg:col-span-6 lg:-ml-12 z-10 relative mt-12 lg:mt-0"
-          >
-            <div className="relative aspect-[4/5] md:aspect-[3/4] lg:aspect-square w-full max-w-2xl ml-auto clip-asymmetric-reverse group">
-              <div className="absolute inset-0 bg-forest/20 mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-700"></div>
-              <Image
-                src="/ukir_minang_carving.png"
-                alt="Intricate Rumah Gadang Wood Carvings"
-                fill
-                className="object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out"
-                priority
+          </div>
+        </div>
+      </div>
+
+      {/* Corporate Philosophy / Stat Divider */}
+      <section className="bg-charcoal-900 text-offwhite-100 border-y-8 border-terracotta songket-border-top relative z-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-charcoal-800/50">
+            <Stat label="Tahun Pengalaman Rekayasa" value="5+" />
+            <Stat label="Bisnis Teraselerasi" value="120+" />
+            <Stat label="Nilai Kepuasan Klien" value="99%" />
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="layanan" className="py-24 relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="border-x border-charcoal-900/10 px-6 md:px-12 py-12">
+
+            <div className="mb-16 md:flex justify-between items-end">
+              <div className="max-w-2xl">
+                <span className="uppercase tracking-widest text-terracotta text-xs font-semibold mb-4 block">Layanan Kami</span>
+                <h2 className="text-3xl md:text-5xl font-light text-charcoal-900 leading-tight">
+                  <strong className="font-semibold">Arsitektur Digital</strong> yang Mendefinisikan Ulang Standar.
+                </h2>
+              </div>
+            </div>
+
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={staggerFade}
+              className="grid lg:grid-cols-2 gap-8"
+            >
+              <StructuralCard
+                icon={<Code strokeWidth={1} size={32} />}
+                title="Bespoke Software Development"
+                desc="Pengembangan aplikasi kustom berbasis web dan mobile untuk entitas bisnis. Dirancang sistematis dari fondasi untuk menangani alur kerja kompleks dan lalu-lintas data tinggi."
               />
-              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-ulin to-transparent z-20"></div>
-
-              {/* Floating Stat Badge */}
-              <div className="absolute bottom-8 left-8 z-30 texture-stone p-6 border-l-4 border-gold max-w-xs shadow-2xl backdrop-blur-sm">
-                <div className="text-gold font-heading font-black text-4xl mb-1">100%</div>
-                <div className="text-xs font-bold uppercase tracking-widest text-ulin">Konstruksi Digital Terpercaya</div>
-              </div>
-            </div>
-
-            {/* Background Accent Element */}
-            <div className="absolute -top-10 -right-10 w-2/3 h-full texture-wood -z-10 clip-asymmetric-reverse opacity-90 translate-y-12 translate-x-12"></div>
-          </motion.div>
+              <StructuralCard
+                icon={<ShieldCheck strokeWidth={1} size={32} />}
+                title="Sistem Manajemen Otomatis"
+                desc="Digitalisasi proses Point of Sales (POS) hingga manajemen rantai pasok. Menyediakan analitik komprehensif bagi UMKM untuk keakuratan audit perusahaan."
+              />
+              <StructuralCard
+                icon={<Smartphone strokeWidth={1} size={32} />}
+                title="Tourism Experience Portal"
+                desc="Etalase interaktif berkinerja tinggi bagi industri perjalanan wisata dan perhotelan Sumatera Barat untuk menyambut standar antarmuka mancanegara."
+              />
+              <StructuralCard
+                icon={<UserCheck strokeWidth={1} size={32} />}
+                title="Konsultasi & Kepatuhan Arsitektur"
+                desc="Audit basis kode lama dan modernisasi infrastruktur yang ada untuk memastikan pergerakan aplikasi mulus, skalabel, serta bebas cacat kelemahan sistem."
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Philosophy / About Section (Asymmetrical overlaps) */}
-      <section id="philosophy" className="py-24 md:py-32 relative">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-8 relative items-center">
-
-          {/* Background Text Overlay */}
-          <div className="absolute top-0 left-12 font-heading font-black text-[10rem] md:text-[15rem] leading-none text-stone-dark opacity-5 select-none z-0">
-            UKIE
-          </div>
-
-          <div className="md:col-span-4 z-10 relative">
-            <div className="texture-wood p-12 lg:p-16 text-sand clip-asymmetric shadow-2xl">
-              <Fingerprint size={48} className="text-gold mb-8 stroke-[1.5]" />
-              <h2 className="text-3xl font-heading font-black mb-6 leading-tight">Keakuratan Arsitektur Minang</h2>
-              <p className="text-sand/80 font-light leading-relaxed mb-8">
-                Seperti pasak kayu ulin pada Rumah Gadang yang mengikat tanpa paku, sistem yang kami bangun merangkai data dengan skalabilitas yang lentur namun kokoh terhadap beban operasional.
+      {/* Work Philosophy / Statement Section */}
+      <section className="py-24 bg-charcoal-100 border-y border-charcoal-900/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-light mb-6 text-charcoal-900">
+                Karya Kami Tidak Diproduksi Massal. <br />
+                <strong className="font-semibold">Itu Berdasar Pemahaman Nyata.</strong>
+              </h2>
+              <p className="text-charcoal-700 leading-relaxed mb-6">
+                Di balik setiap implementasi teknologi yang sukses, terdapat metodologi yang dianalisa secara kritis. Kami tidak menawarkan *software* jadi (*out-of-the-box*), melainkan menjahit baris-baris logika pemrograman agar sesuai dengan postur operasional perusahaan Anda.
               </p>
-              <div className="w-12 h-1 bg-gold"></div>
+              <Link href="#kontak" className="inline-flex items-center gap-2 text-terracotta font-semibold hover:text-terracotta-hover transition-colors text-sm uppercase tracking-wider">
+                Baca Metodologi Kami <ArrowRight size={16} />
+              </Link>
             </div>
-          </div>
-
-          <div className="md:col-span-7 col-start-6 z-10 lg:pl-16 mt-8 md:mt-0">
-            <div className="flex flex-col gap-6">
-              <div className="w-full texture-stone p-8 lg:p-12 border-t-2 border-forest hover:border-gold transition-colors duration-300">
-                <h3 className="text-xl font-heading font-bold text-ulin mb-4">Profesionalisme Global</h3>
-                <p className="text-stone-deep mb-6">Menerapkan praktik <i>Clean Architecture</i> dan keamanan berlapis (End-to-End Encryption) layaknya standar SaaS di Silicon Valley. Kualitas tanpa kompromi untuk pasar pariwisata yang global.</p>
-                <ul className="grid grid-cols-2 gap-3 text-sm font-semibold text-ulin">
-                  <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-forest" /> Zero Downtime</li>
-                  <li className="flex items-center gap-2"><CheckCircle2 size={16} className="text-forest" /> Code Audit</li>
-                </ul>
-              </div>
-
-              <div className="w-full md:w-[90%] md:ml-auto texture-stone p-8 lg:p-12 border-t-2 border-forest hover:border-gold transition-colors duration-300 shadow-xl relative md:top-[-2rem] md:left-[2rem]">
-                <h3 className="text-xl font-heading font-bold text-ulin mb-4">Kekeluargaan Lokal</h3>
-                <p className="text-stone-deep">Kami mengawal UMKM bukan sekadar dari layar komputer, melainkan melalui pendampingan tatap muka, edukasi langsung, dan komunikasi yang memecah batas bahasa teknis.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Services Section with distinct column layouts */}
-      <section id="expertise" className="py-24 bg-forest text-sand relative overflow-hidden">
-        {/* River stone abstract shapes */}
-        <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-forest-dark/50 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
-
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8 border-b border-sand/10 pb-8">
-            <h2 className="text-4xl lg:text-7xl font-heading font-black text-sand max-w-3xl">
-              FONDASI <span className="text-gold">TEKNOLOGI.</span>
-            </h2>
-            <p className="text-sand/70 max-w-sm text-lg md:text-right font-light">
-              Menangani infrastruktur digital yang kompleks dan menjadikannya solusi bisnis yang elegan.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-12 gap-6">
-            <div className="md:col-span-5 texture-wood p-10 lg:p-14 group cursor-pointer relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-bl-full scale-0 group-hover:scale-150 transition-transform duration-700"></div>
-              <BarChart3 size={40} className="text-gold mb-8" strokeWidth={1} />
-              <h3 className="text-3xl font-heading font-bold mb-4">UMKM Point of Sales</h3>
-              <p className="text-sand/60 mb-12">Sistem operasional retail yang tahan banting. Manajemen stok multisistem dengan dasbor eksekutif.</p>
-              <div className="text-gold font-bold uppercase tracking-widest text-xs flex items-center gap-2 group-hover:gap-4 transition-all">
-                Telusuri <ArrowRight size={14} className="text-gold" />
-              </div>
-            </div>
-
-            <div className="md:col-span-7 flex flex-col gap-6">
-              <div className="texture-stone bg-opacity-5 p-10 lg:p-14 border border-sand/10 group cursor-pointer relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-forest-dark/30 rounded-bl-full scale-0 group-hover:scale-150 transition-transform duration-700"></div>
-                <Globe size={40} className="text-gold mb-6" strokeWidth={1} />
-                <h3 className="text-3xl font-heading font-bold mb-4 text-ulin">Tourism Portals</h3>
-                <p className="text-stone-deep mb-6 max-w-xl">Halaman depan visual bagi audiens global. Website pariwisata yang optimal untuk mesin pencari dengan integrasi reservasi instan.</p>
-                <div className="text-forest font-bold uppercase tracking-widest text-xs flex items-center gap-2 group-hover:gap-4 transition-all">
-                  Telusuri <ArrowRight size={14} className="text-forest" />
+            <div className="relative p-10 bg-offwhite-200 border border-charcoal-900/10 songket-border-top shadow-lg">
+              <Box className="text-terracotta mb-6 opacity-30" size={48} />
+              <p className="text-xl font-medium text-charcoal-800 leading-relaxed mb-6">
+                "Teknologi terbaik seharusnya tidak terasa seperti teknologi. Itu harus terasa seperti perpanjangan tangan organisasi yang andal dan tanpa friksi sama sekali."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-charcoal-900 flex items-center justify-center text-white text-xs font-bold">BK</div>
+                <div>
+                  <h5 className="font-semibold text-charcoal-900 text-sm">Prinsip Rekayasa BKTech</h5>
+                  <span className="text-charcoal-600 text-xs">Arsitektur & Logika Implementasi</span>
                 </div>
               </div>
-
-              <div className="texture-stone bg-opacity-5 p-10 lg:p-14 border border-sand/10 group cursor-pointer relative overflow-hidden">
-                <Database size={40} className="text-gold mb-6" strokeWidth={1} />
-                <h3 className="text-3xl font-heading font-bold mb-4 text-ulin">Enterprise Custom Platform</h3>
-                <p className="text-stone-deep mb-6 max-w-xl">Infrastruktur B2B privat. Membangun aplikasi web/mobile yang dirancang presisi sesuai alur kerja perusahaan.</p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Whatsapp Focus */}
-      <section className="py-0 relative">
-        <div className="grid md:grid-cols-2 min-h-[50vh]">
-          <div className="texture-stone flex flex-col justify-center p-12 lg:p-24 relative overflow-hidden">
-            <div className="absolute -left-12 top-1/2 -translate-y-1/2 rotate-90 text-[8rem] font-heading font-black text-ulin/5 select-none whitespace-nowrap">CONTACT</div>
-            <h2 className="text-4xl lg:text-5xl font-heading font-black text-ulin mb-6 z-10 leading-tight">
-              Akselerasi Pertumbuhan Perusahaan Anda.
-            </h2>
-            <p className="text-stone-deep max-w-md z-10 mb-12">
-              Jadwalkan konsultasi arsitektur sistem secara langsung, tatap muka, dan tanpa komitmen yang mengikat.
-            </p>
-          </div>
-          <div className="texture-wood p-12 lg:p-24 flex items-center justify-center relative shadow-inner">
-            <div className="absolute inset-0 bg-[radial-gradient(var(--color-gold)_1px,transparent_1px)] opacity-[0.03] bg-[size:20px_20px]"></div>
-            <button className="relative w-full max-w-sm bg-sand hover:bg-white text-ulin p-8 flex flex-col items-center gap-6 group transition-colors shadow-2xl clip-asymmetric">
-              <div className="w-16 h-16 bg-forest rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(43,58,50,0.4)] group-hover:scale-110 transition-transform duration-500">
-                <MessageCircleCode size={30} className="text-gold" />
-              </div>
-              <div className="text-center">
-                <div className="font-heading font-black text-2xl mb-2">WhatsApp Direct</div>
-                <div className="text-sm text-stone-dark tracking-wide">+62 811 0000 0000</div>
-              </div>
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gold scale-x-50 group-hover:scale-x-100 transition-transform duration-500"></div>
+      {/* CTA Built upon Structure */}
+      <section className="py-32 relative overflow-hidden bg-offwhite-200 border-b border-charcoal-900/10">
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <span className="uppercase tracking-widest text-terracotta text-xs font-semibold mb-6 block">Memulai Interaksi Sistem</span>
+          <h2 className="text-4xl md:text-5xl font-semibold mb-8 text-charcoal-900 tracking-tight">Inisiasi Infrastruktur Digital Baru.</h2>
+          <p className="text-lg text-charcoal-700 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Hadirkan kestabilan sistem perangkat lunak untuk ekspansi bisnis Anda. Ajukan proposal pertemuan teknis dengan arsitek pengembangan kami.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-charcoal-900 hover:bg-charcoal-800 text-white px-10 py-5 font-medium text-sm transition-all">
+              Jadwalkan Konsultasi Teknis
+            </button>
+            <button className="bg-offwhite-100 border border-charcoal-900/10 hover:border-charcoal-900/30 text-charcoal-900 px-10 py-5 font-medium text-sm transition-all focus:outline-none">
+              Ajukan Tanya Jawab
             </button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="texture-wood text-sand/60 py-16 border-t border-sand/10">
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
-
-          <div className="max-w-sm text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start gap-4 mb-8">
+      <footer className="bg-offwhite-200 text-charcoal-700 pt-20 pb-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-12 gap-12 mb-16 px-6">
+            <div className="col-span-1 md:col-span-5">
               <Image
                 src="/logo-no-bg.png"
                 alt="BKTech Logo"
-                width={160}
-                height={40}
-                className="h-8 object-contain w-auto brightness-0 invert opacity-90"
+                width={120}
+                height={30}
+                className="h-6 object-contain w-auto mb-6 opacity-80 invert"
               />
+              <p className="text-sm max-w-sm mb-8 leading-relaxed">
+                Platform dan perangkat lunak rekayasa industri terukur untuk memajukan fondasi perekonomian lokal Sumatra Barat menuju arena kompetensi global.
+              </p>
             </div>
-            <p className="text-sm font-light leading-loose text-sand/50">
-              Menghubungkan filosofi desain alam Minangkabau dengan rekayasa teknologi digital terkini untuk memajukan perekonomian daerah.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-2 gap-16 text-sm">
-            <div>
-              <h4 className="text-gold font-bold uppercase tracking-widest text-xs mb-6">Kantor Utama</h4>
-              <ul className="space-y-3 font-light">
-                <li>Jl. Khatib Sulaiman No. 1</li>
-                <li>Padang, Sumatera Barat</li>
-                <li>Indonesia 25136</li>
-                <li className="mt-8 pt-4 border-t border-sand/20 text-sand">hello@bktech.id</li>
+            <div className="md:col-span-3 md:col-start-7">
+              <h4 className="font-semibold text-charcoal-900 text-sm mb-6 uppercase tracking-wider">Perihal Kami</h4>
+              <ul className="space-y-4 text-sm">
+                <li><Link href="#" className="hover:text-terracotta transition-colors">Portofolio Kerja</Link></li>
+                <li><Link href="#" className="hover:text-terracotta transition-colors">Metodologi & Filosofi</Link></li>
+                <li><Link href="#" className="hover:text-terracotta transition-colors">Arsitektur Rantai Cerdas</Link></li>
               </ul>
             </div>
-            <div>
-              <h4 className="text-gold font-bold uppercase tracking-widest text-xs mb-6">Jejaring</h4>
-              <ul className="space-y-3 font-light">
-                <li><Link href="#layanan" className="hover:text-gold transition-colors">Layanan Sistem</Link></li>
-                <li><Link href="#tentang" className="hover:text-gold transition-colors">Portofolio Rilis</Link></li>
-                <li><Link href="#klien" className="hover:text-gold transition-colors">Studi Kasus UMKM</Link></li>
-                <li><Link href="#klien" className="hover:text-gold transition-colors">Karir & Budaya</Link></li>
+
+            <div className="md:col-span-3">
+              <h4 className="font-semibold text-charcoal-900 text-sm mb-6 uppercase tracking-wider">Hubungi</h4>
+              <ul className="space-y-4 text-sm">
+                <li>Jakarta — Padang, Indonesia</li>
+                <li><a href="mailto:hello@bktech.id" className="hover:text-terracotta transition-colors">hello@bktech.id</a></li>
+                <li>+62 811-0000-0000</li>
               </ul>
             </div>
           </div>
 
-        </div>
-
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 mt-20 pt-8 border-t border-sand/10 text-xs font-light tracking-widest uppercase flex flex-col md:flex-row justify-between items-center gap-4">
-          <span>&copy; {new Date().getFullYear()} BKTech Engineering. All Rights Reserved.</span>
-          <div className="flex gap-6 text-sand/40">
-            <span>Security by Design</span>
-            <span>Local Engineering</span>
+          <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-charcoal-900/10 text-xs px-6 uppercase tracking-widest text-charcoal-600">
+            <p>&copy; 2026 BKTech. Desain Klasik Presisi Mutlak.</p>
+            <div className="flex items-center gap-6 mt-4 md:mt-0">
+              <Link href="#" className="hover:text-charcoal-900 transition-colors">Kebijakan Privasi</Link>
+              <Link href="#" className="hover:text-charcoal-900 transition-colors">LinkedIn</Link>
+            </div>
           </div>
         </div>
       </footer>
     </main>
+  );
+}
+
+// Utility Components
+function Stat({ label, value }: { label: string, value: string }) {
+  return (
+    <div className="py-12 px-6 flex flex-col justify-center text-center group">
+      <span className="font-light text-5xl md:text-6xl text-white mb-4 group-hover:text-terracotta transition-colors">{value}</span>
+      <span className="text-xs font-semibold text-offwhite-400 uppercase tracking-widest">{label}</span>
+    </div>
+  );
+}
+
+function StructuralCard({ icon, title, desc }: { icon: ReactNode, title: string, desc: string }) {
+  return (
+    <motion.div variants={fadeUp} className="bg-white p-10 border border-charcoal-900/5 hover:border-charcoal-900/20 group transition-all duration-300 relative z-10 hover:-translate-y-1 shadow-sm hover:shadow-lg">
+      <div className="absolute top-0 left-0 w-1 h-0 bg-terracotta group-hover:h-full transition-all duration-500 ease-out"></div>
+      <div className="text-charcoal-900 mb-8 opacity-80 group-hover:opacity-100 group-hover:text-terracotta transition-colors duration-300">
+        {icon}
+      </div>
+      <h3 className="font-semibold text-xl text-charcoal-900 mb-4">{title}</h3>
+      <p className="text-sm text-charcoal-600 leading-relaxed">{desc}</p>
+    </motion.div>
   );
 }
