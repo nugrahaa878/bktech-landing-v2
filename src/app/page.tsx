@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/home/Hero";
 import { StatsDivider } from "@/components/home/StatsDivider";
 import { Services } from "@/components/home/Services";
+import { Portfolio } from "@/components/home/Portfolio";
 import { Philosophy } from "@/components/home/Philosophy";
 import { Experience } from "@/components/home/Experience";
 import { CallToAction } from "@/components/home/CallToAction";
@@ -31,6 +32,8 @@ export default function Home() {
       <Experience />
 
       <Services />
+
+      <Portfolio />
 
       <Philosophy />
 
