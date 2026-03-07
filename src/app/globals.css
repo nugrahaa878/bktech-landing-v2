@@ -4,15 +4,21 @@
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   
-  --color-primary: #13A89E;
-  --color-secondary: #0F75BC;
-  --color-bg-main: #0E111D;
-  --color-tertiary: #FFFFFF;
+  --color-navy-deep: #050A15;
+  --color-navy-main: #0B132B;
+  --color-navy-light: #1C2541;
+  --color-navy-border: #2A3655;
+  
+  --color-gray-soft: #EAEBEE;
+  --color-gray-dark: #8E9BAE;
+  
+  --color-accent: #FF9F1C;
+  --color-accent-hover: #E88C15;
 }
 
 :root {
-  --background: var(--color-bg-main);
-  --foreground: var(--color-tertiary);
+  --background: var(--color-navy-deep);
+  --foreground: var(--color-gray-soft);
 }
 
 body {
@@ -23,19 +29,35 @@ body {
   color-scheme: dark;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), sans-serif;
+  letter-spacing: -0.02em;
 }
 
-.circuit-pattern {
-  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
+/* Abstract Minangkabau Geometric Pattern (Singkarak/Carving inspired) */
+.ukiran-pattern {
+  background-image: 
+    linear-gradient(30deg, rgba(255,255,255,0.01) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.01) 87.5%, rgba(255,255,255,0.01)),
+    linear-gradient(150deg, rgba(255,255,255,0.01) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.01) 87.5%, rgba(255,255,255,0.01)),
+    linear-gradient(30deg, rgba(255,255,255,0.01) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.01) 87.5%, rgba(255,255,255,0.01)),
+    linear-gradient(150deg, rgba(255,255,255,0.01) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.01) 87.5%, rgba(255,255,255,0.01)),
+    linear-gradient(60deg, rgba(255,255,255,0.01) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.01) 75%, rgba(255,255,255,0.01)),
+    linear-gradient(60deg, rgba(255,255,255,0.01) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.01) 75%, rgba(255,255,255,0.01));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
 .text-gradient {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  background-image: linear-gradient(to right, var(--color-gray-soft), var(--color-gray-dark));
+}
+
+.clip-angular {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.clip-angular-reverse {
+  clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
 }

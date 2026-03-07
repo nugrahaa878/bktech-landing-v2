@@ -1,321 +1,312 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Code, Store, Globe, MapPin, Zap, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Hexagon, Shield, Globe2, Briefcase, RefreshCw, ArrowRight, Store, Code } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { ReactNode } from "react";
 
-const fadeIn: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
 
-const staggerContainer: Variants = {
+const staggerFade: Variants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } }
+};
+
+const drawLine: Variants = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: {
+    pathLength: 1,
+    opacity: 1,
+    transition: { duration: 2, ease: "easeOut" }
+  }
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-bg-main text-tertiary selection:bg-primary selection:text-white">
-      {/* Navbar Minimalist */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-bg-main/80 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/logo-no-bg.png"
-              alt="BKTech Logo"
-              width={160}
-              height={40}
-              className="h-8 object-contain w-auto"
-            />
+    <main className="min-h-screen bg-navy-deep text-gray-soft selection:bg-accent selection:text-navy-deep font-body">
+      {/* Background Abstract Skyline Wireframe */}
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-20 flex justify-center items-end overflow-hidden pb-10">
+        <svg viewBox="0 0 1440 400" className="w-full min-w-[1440px] h-auto stroke-navy-border fill-none" strokeWidth="0.5">
+          {/* Abstract geometric mountains & architecture inspired by Minang skyline */}
+          <motion.path
+            variants={drawLine} initial="hidden" animate="visible"
+            d="M 0 350 L 120 350 L 160 310 L 180 310 L 220 250 L 250 250 L 280 210 L 320 210 L 360 260 L 400 260 L 450 180 L 480 180 L 520 220 L 580 220 L 620 150 L 650 150 L 720 50 L 790 150 L 820 150 L 860 220 L 920 220 L 960 180 L 990 180 L 1040 260 L 1080 260 L 1120 210 L 1160 210 L 1190 250 L 1220 250 L 1260 310 L 1280 310 L 1320 350 L 1440 350"
+          />
+          {/* Symmetrical Masjid Raya / Bagonjong abstract wireframes */}
+          <motion.path
+            variants={drawLine} initial="hidden" animate="visible"
+            d="M 620 350 L 620 250 L 680 200 L 720 100 L 760 200 L 820 250 L 820 350"
+          />
+          <motion.path
+            variants={drawLine} initial="hidden" animate="visible"
+            d="M 640 350 L 640 270 L 690 220 L 720 150 L 750 220 L 800 270 L 800 350"
+          />
+          {/* Geometric Grid Overlay */}
+          <g stroke="rgba(234, 235, 238, 0.05)" strokeWidth="1">
+            <line x1="0" y1="100" x2="1440" y2="100" />
+            <line x1="0" y1="200" x2="1440" y2="200" />
+            <line x1="0" y1="300" x2="1440" y2="300" />
+            <line x1="360" y1="0" x2="360" y2="400" />
+            <line x1="720" y1="0" x2="720" y2="400" />
+            <line x1="1080" y1="0" x2="1080" y2="400" />
+          </g>
+        </svg>
+      </div>
+
+      <div className="ukiran-pattern fixed inset-0 z-0 pointer-events-none mix-blend-overlay"></div>
+
+      {/* Corporate Header */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-navy-deep/80 backdrop-blur-xl border-b border-navy-light uppercase tracking-wider text-xs">
+        <div className="max-w-[1440px] mx-auto px-8 md:px-16 h-24 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-4 relative z-10">
+            <div className="relative w-10 h-10 border border-navy-border flex items-center justify-center -rotate-45">
+              <div className="w-8 h-8 bg-accent/10 border border-accent rotate-45 flex items-center justify-center">
+                <span className="font-heading font-black text-lg text-accent -rotate-45 mt-0.5 ml-0.5">B</span>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-heading font-black text-xl tracking-widest text-gray-soft leading-none">BKTech</span>
+              <span className="text-[10px] text-gray-dark tracking-widest mt-1">Digital Architecture</span>
+            </div>
+          </Link>
+          <div className="hidden lg:flex items-center gap-12 font-semibold text-gray-dark">
+            <Link href="#services" className="hover:text-accent transition-colors flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-navy-border rotate-45"></span> Services
+            </Link>
+            <Link href="#philosophy" className="hover:text-accent transition-colors flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-navy-border rotate-45"></span> Philosophy
+            </Link>
+            <Link href="#impact" className="hover:text-accent transition-colors flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-navy-border rotate-45"></span> Impact
+            </Link>
           </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
-            <Link href="#layanan" className="hover:text-primary transition-colors">Layanan</Link>
-            <Link href="#tentang" className="hover:text-primary transition-colors">Tentang Kami</Link>
-            <Link href="#klien" className="hover:text-primary transition-colors">UMKM & Pariwisata</Link>
-          </div>
-          <button className="bg-white/10 hover:bg-primary text-tertiary px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-lg hover:shadow-primary/30 border border-white/10 hover:border-primary">
-            Mulai Konsultasi
+          <button className="relative group overflow-hidden bg-transparent border border-navy-border text-gray-soft px-8 py-3 uppercase tracking-widest font-bold text-xs transition-all hover:border-accent z-10 clip-angular">
+            <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
+            <span className="relative z-10 group-hover:text-navy-deep flex items-center gap-2">
+              Initiate Project <ArrowUpRight size={14} />
+            </span>
           </button>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-bg-main text-tertiary">
-        <div className="absolute inset-0 opacity-20 circuit-pattern"></div>
-        <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-primary rounded-full blur-[150px] opacity-20 -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-secondary rounded-full blur-[150px] opacity-20 translate-y-1/2 -translate-x-1/2"></div>
+      <div className="relative z-10 pt-40 pb-20">
+        <div className="max-w-[1440px] mx-auto px-8 md:px-16">
 
-        <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-          <motion.h1 initial="hidden" animate="visible" variants={fadeIn} className="text-5xl md:text-7xl font-heading font-black tracking-tight leading-[1.1] mb-6 max-w-4xl text-balance">
-            Membangun Masa Depan <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Digital BKTech</span>
-          </motion.h1>
+          {/* Grid Layout Lines */}
+          <div className="absolute top-0 bottom-0 left-8 md:left-16 w-px bg-navy-border opacity-50 z-0"></div>
+          <div className="absolute top-0 bottom-0 right-8 md:right-16 w-px bg-navy-border opacity-50 z-0"></div>
+          <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 w-px bg-navy-border opacity-50 z-0"></div>
 
-          <motion.p initial="hidden" animate="visible" variants={fadeIn} className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl text-balance">
-            Local Support for Global Quality. Kami membantu UMKM dan sektor pariwisata di Sumatera Barat melompat ke era digital dengan solusi teknologi yang aman, cepat, dan profesional.
-          </motion.p>
+          {/* Hero Section */}
+          <section className="relative min-h-[70vh] flex flex-col justify-center border-t border-navy-border pt-16">
+            <div className="absolute top-0 right-1/4 w-px h-24 bg-accent opacity-50"></div>
 
-          <motion.div initial="hidden" animate="visible" variants={fadeIn} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <button className="bg-primary hover:bg-[#108c83] text-white px-8 py-4 rounded-full font-semibold text-base transition-all flex items-center justify-center gap-2 shadow-xl shadow-primary/20 group">
-              Transformasi Sekarang
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-semibold text-base transition-all flex items-center justify-center gap-2">
-              Lihat Portofolio
-            </button>
-          </motion.div>
-        </div>
+            <motion.div initial="hidden" animate="visible" variants={staggerFade} className="max-w-4xl">
+              <motion.div variants={fadeUp} className="flex items-center gap-6 mb-12">
+                <div className="h-px w-16 bg-accent"></div>
+                <span className="uppercase tracking-[0.2em] text-accent text-sm font-bold flex items-center gap-2">
+                  <Hexagon size={12} fill="currentColor" /> West Sumatra Base
+                </span>
+              </motion.div>
 
-        {/* Rumah Gadang x Circuit Illustration */}
-        <div className="max-w-7xl mx-auto px-6 mt-20 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="w-full flex justify-center"
-          >
-            <svg viewBox="0 0 1000 400" className="w-full max-w-4xl h-auto drop-shadow-2xl">
-              <defs>
-                <linearGradient id="primary-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="var(--color-primary)" />
-                  <stop offset="100%" stopColor="var(--color-secondary)" />
-                </linearGradient>
-                <linearGradient id="slate-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stopColor="rgba(255,255,255,0.1)" />
-                  <stop offset="100%" stopColor="rgba(255,255,255,0.02)" />
-                </linearGradient>
-                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur stdDeviation="8" result="blur" />
-                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                </filter>
-              </defs>
+              <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-[5.5rem] font-heading font-black leading-[1.05] mb-10 text-gray-soft uppercase">
+                Bridging <span className="text-gray-dark">Cultural Heritage</span> <br />
+                With <span className="text-accent">Digital Excellence</span>
+              </motion.h1>
 
-              <g stroke="rgba(255,255,255,0.2)" strokeWidth="2" fill="none" opacity="0.6">
-                <path d="M 500 300 L 500 400" />
-                <circle cx="500" cy="400" r="4" fill="var(--color-primary)" />
-                <path d="M 450 300 L 450 350 L 400 350 L 400 400" />
-                <circle cx="400" cy="400" r="4" fill="rgba(255,255,255,0.2)" />
-                <path d="M 550 300 L 550 350 L 600 350 L 600 400" />
-                <circle cx="600" cy="400" r="4" fill="rgba(255,255,255,0.2)" />
-
-                <path d="M 300 240 L 250 240 L 250 350 L 200 350" />
-                <circle cx="200" cy="350" r="4" fill="var(--color-secondary)" />
-                <path d="M 220 200 L 150 200 L 150 300" />
-                <circle cx="150" cy="300" r="4" fill="rgba(255,255,255,0.2)" />
-
-                <path d="M 700 240 L 750 240 L 750 350 L 800 350" />
-                <circle cx="800" cy="350" r="4" fill="var(--color-secondary)" />
-                <path d="M 780 200 L 850 200 L 850 300" />
-                <circle cx="850" cy="300" r="4" fill="rgba(255,255,255,0.2)" />
-              </g>
-
-              <g fill="var(--color-primary)" className="animate-pulse">
-                <circle cx="200" cy="110" r="3" filter="url(#glow)" />
-                <circle cx="340" cy="80" r="3" filter="url(#glow)" />
-                <circle cx="500" cy="50" r="4" filter="url(#glow)" />
-                <circle cx="660" cy="80" r="3" filter="url(#glow)" />
-                <circle cx="800" cy="110" r="3" filter="url(#glow)" />
-              </g>
-
-              <g transform="translate(0, 30)">
-                <path d="M 280 270 L 720 270 L 680 300 L 320 300 Z" fill="url(#slate-grad)" stroke="var(--color-primary)" strokeWidth="2" />
-
-                <path d="M 500 60 
-                         C 450 120, 380 150, 320 120 
-                         C 380 160, 450 170, 500 170 
-                         C 550 170, 620 160, 680 120 
-                         C 620 150, 550 120, 500 60 Z" fill="none" stroke="var(--color-secondary)" strokeWidth="3" filter="url(#glow)" />
-
-                <path d="M 500 40 
-                         C 350 120, 200 180, 150 100 
-                         C 220 180, 350 200, 500 210" fill="none" stroke="var(--color-primary)" strokeWidth="4" />
-
-                <path d="M 500 40 
-                         C 650 120, 800 180, 850 100 
-                         C 780 180, 650 200, 500 210" fill="none" stroke="var(--color-primary)" strokeWidth="4" />
-
-                <path d="M 300 200 L 300 270 M 350 205 L 350 270 M 400 208 L 400 270 M 450 210 L 450 270 M 500 210 L 500 270 M 550 210 L 550 270 M 600 208 L 600 270 M 650 205 L 650 270 M 700 200 L 700 270" stroke="rgba(255,255,255,0.15)" strokeWidth="2" strokeDasharray="4 2" />
-
-                <path d="M 460 210 L 540 210 L 540 270 L 460 270 Z" fill="url(#slate-grad)" stroke="var(--color-primary)" strokeWidth="1" />
-
-                <path d="M 495 20 L 505 20 L 500 40 Z" fill="var(--color-secondary)" filter="url(#glow)" />
-              </g>
-            </svg>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Trust & Stats */}
-      <section className="py-12 bg-bg-main border-y border-white/10 relative z-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/10">
-            <Stat label="Tahun Pengalaman" value="5+" />
-            <Stat label="UMKM Terbantu" value="120+" />
-            <Stat label="Kualitas Sistem" value="Global" />
-            <Stat label="Fokus Wilayah" value="Sumbar" />
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="layanan" className="py-24 bg-bg-main relative">
-        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-linear-to-b from-transparent to-primary/5 pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="mb-16 md:flex justify-between items-end">
-            <div className="max-w-2xl">
-              <h2 className="text-3xl md:text-5xl font-heading font-black text-tertiary mb-6">
-                Solusi Digital <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Tepat Sasaran</span> untuk Ekosistem Bisnis Kita
-              </h2>
-              <p className="text-lg text-white/70">
-                Kami memahami tantangan spesifik yang dihadapi pengusaha di Ranah Minang. Solusi kami dirancang untuk mudah digunakan, aman, dan dapat diskalakan seiring pergerakan bisnis Anda.
-              </p>
-            </div>
-            <Link href="#kontak" className="hidden md:flex items-center gap-2 text-primary font-semibold hover:text-secondary transition-colors">
-              Konsultasi Kebutuhan <ArrowRight size={16} />
-            </Link>
-          </div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-6"
-          >
-            <ServiceCard
-              icon={<Store size={32} />}
-              title="Sistem Point of Sales UMKM"
-              desc="Aplikasi kasir cerdas dan manajemen inventaris yang terintegrasi. Bantu catat penjualan tanpa ribet, langsung dari HP Anda."
-            />
-            <ServiceCard
-              icon={<Globe size={32} />}
-              title="Website Etalase Pariwisata"
-              desc="Kami mendesain portal wisata berstandar global. Buat destinasi atau layanan travel Anda dikenal wisatawan domestik maupun mancanegara."
-            />
-            <ServiceCard
-              icon={<Code size={32} />}
-              title="Pengembangan Aplikasi Kustom"
-              desc="Punya alur kerja unik? Kami buatkan platform digital khusus (Web/Mobile) yang sesuai persis dengan kebutuhan operasional perusahaan Anda."
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Feature / Concept Section */}
-      <section id="tentang" className="py-24 bg-bg-main overflow-hidden border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="w-full md:w-1/2 relative"
-          >
-            <div className="aspect-square bg-white/5 rounded-3xl relative overflow-hidden group border border-white/10">
-              <div className="absolute inset-0 circuit-pattern opacity-50"></div>
-              <div className="absolute inset-8 bg-bg-main rounded-2xl shadow-2xl flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-transform duration-500 ease-out border border-white/10">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 bg-primary/20 rounded-full text-primary flex items-center justify-center mx-auto mb-6 shadow-[0_0_30px_rgba(19,168,158,0.3)]">
-                    <ShieldCheck size={40} />
+              <motion.div variants={fadeUp} className="grid md:grid-cols-2 gap-12 lg:gap-24 mb-16 relative">
+                <div className="text-lg text-gray-dark leading-relaxed font-light">
+                  Membangun fondasi digital yang presisi dengan nilai <strong className="text-gray-soft font-semibold">Kekeluargaan</strong> yang kokoh dan eksekusi yang penuh <strong className="text-gray-soft font-semibold">Profesionalisme</strong>.
+                </div>
+                <div className="flex flex-col gap-6 justify-center">
+                  <div className="flex items-center gap-4 text-sm font-semibold tracking-wider uppercase text-gray-soft">
+                    <div className="w-12 h-12 flex items-center justify-center border border-navy-border clip-angular rotate-[-9deg]">
+                      <Briefcase size={18} className="text-accent" />
+                    </div>
+                    Corporate Ready
                   </div>
-                  <h3 className="font-heading font-bold text-2xl text-tertiary mb-4">Lokal Bercita Rasa Global</h3>
-                  <p className="text-white/60 max-w-sm text-balance">
-                    Setiap baris kode yang ditulis dikerjakan dengan standar industri Silicon Valley, disesuaikan untuk kebutuhan nyata pasar lokal.
-                  </p>
+                  <div className="flex items-center gap-4 text-sm font-semibold tracking-wider uppercase text-gray-soft">
+                    <div className="w-12 h-12 flex items-center justify-center border border-navy-border clip-angular">
+                      <Shield size={18} className="text-accent" />
+                    </div>
+                    Engineered for Trust
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </section>
+
+          {/* Philosophy Section */}
+          <section id="philosophy" className="py-32 border-t border-navy-border relative">
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-0">
+              <div className="lg:col-span-5 flex flex-col justify-between">
+                <div>
+                  <h2 className="text-sm font-bold tracking-[0.2em] text-accent uppercase mb-4 flex items-center gap-3">
+                    <div className="w-2 h-2 bg-accent rotate-45"></div> 01. The Paradox
+                  </h2>
+                  <h3 className="text-4xl font-heading font-bold text-gray-soft uppercase leading-tight mb-8 max-w-sm">
+                    Symmetry of Mind & Machine
+                  </h3>
+                </div>
+                <div className="hidden lg:block w-32 h-32 border border-navy-border p-4">
+                  <div className="w-full h-full border border-navy-border/50 rotate-45 flex items-center justify-center">
+                    <div className="w-8 h-8 bg-navy-border/30 rotate-45"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 lg:pl-16 lg:border-l border-navy-border relative">
+                <div className="absolute top-1/2 -left-3 w-6 h-6 bg-navy-deep border border-navy-border rotate-45 transform -translate-y-1/2"></div>
+                <div className="space-y-12">
+                  <motion.div
+                    initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+                    className="p-10 border border-navy-border bg-navy-main/30 backdrop-blur-sm relative group overflow-hidden"
+                  >
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-accent/5 rounded-bl-full group-hover:scale-150 transition-transform duration-700"></div>
+                    <div className="absolute top-4 right-4 text-4xl font-heading font-black text-navy-border/40 select-none">FAM</div>
+                    <h4 className="text-2xl font-heading font-bold text-gray-soft mb-4 flex items-center gap-3">
+                      Asas Kekeluargaan <span className="w-8 h-px bg-accent"></span>
+                    </h4>
+                    <p className="text-gray-dark leading-relaxed">
+                      Kami berpartner dengan UMKM dan pelaku Pariwisata di Sumatera Barat bukan sekadar vendor, melainkan sebagai keluarga. Memahami visi, melindungi kepentingan, dan bertumbuh bersama secara organik di tanah Minang.
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+                    className="p-10 border border-navy-border bg-navy-main/30 backdrop-blur-sm relative group overflow-hidden"
+                  >
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-accent/5 rounded-tr-full group-hover:scale-150 transition-transform duration-700"></div>
+                    <div className="absolute bottom-4 left-4 text-4xl font-heading font-black text-navy-border/40 select-none">PRO</div>
+                    <h4 className="text-2xl font-heading font-bold text-gray-soft mb-4 flex items-center gap-3 justify-end">
+                      <span className="w-8 h-px bg-accent"></span> Eksekusi Profesional
+                    </h4>
+                    <p className="text-gray-dark leading-relaxed text-right">
+                      Kehangatan lokal dibalut dengan presisi rekayasa perangkat lunak kelas dunia. Setiap arsitektur sistem, baris kode, dan penyebaran dirancang menggunakan metodologi berstandar industri dengan skala tak terbatas.
+                    </p>
+                  </motion.div>
                 </div>
               </div>
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-full blur-[70px] opacity-40"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary rounded-full blur-[70px] opacity-30"></div>
-          </motion.div>
+          </section>
 
-          <div className="w-full md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-heading font-black text-tertiary mb-6 leading-tight">
-              Mengapa Memilih <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">BKTech</span>?
-            </h2>
-            <div className="space-y-8 mt-10">
-              <FeatureItem
-                title="Paham Secara Kultural"
-                desc="Komunikasi lebih nyambung. Kami adalah putra asli daerah yang mengerti lanskap perekonomian dan dinamika kultural Sumatera Barat."
+          {/* Services Matrix */}
+          <section id="services" className="py-32 border-t border-navy-border">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+              <div>
+                <h2 className="text-sm font-bold tracking-[0.2em] text-accent uppercase mb-4 flex items-center gap-3">
+                  <div className="w-2 h-2 bg-accent rotate-45"></div> 02. Capabilities
+                </h2>
+                <h3 className="text-4xl md:text-5xl font-heading font-bold text-gray-soft uppercase leading-tight max-w-2xl">
+                  Strategic Systems Architecture
+                </h3>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-12 h-12 border border-navy-border flex items-center justify-center hover:bg-navy-main transition-colors cursor-pointer">
+                  <ArrowRight size={20} className="rotate-180" />
+                </div>
+                <div className="w-12 h-12 border border-navy-light bg-navy-main flex items-center justify-center hover:bg-accent hover:text-navy-deep transition-colors cursor-pointer text-gray-soft">
+                  <ArrowRight size={20} />
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-0 border border-navy-border">
+              <GeometricCard
+                icon={<Store size={28} strokeWidth={1.5} />}
+                number="P.01"
+                title="SME Point of Sales"
+                desc="Sistem kasir dan manajemen operasional terintegrasi. Analitik real-time dirancang khusus untuk ritel dan F&B."
               />
-              <FeatureItem
-                title="Performa Tinggi & Keamanan"
-                desc="Menggunakan infrastruktur modern (Cloud & arsitektur mikro) yang menjamin sistem anti-lelet walau diakses ribuan konsumen."
+              <GeometricCard
+                icon={<Globe2 size={28} strokeWidth={1.5} />}
+                number="P.02"
+                title="Tourism Portals"
+                desc="Platform web interaktif berstandar global. Mengangkat nilai destinasi lokal ke mata dunia dengan performa mutlak."
+                center
               />
-              <FeatureItem
-                title="Pendampingan Jangka Panjang"
-                desc="Bukan sekadar 'buat lalu ditinggal'. Kami pastikan sistem berjalan lancar, dan Anda paham cara memanfaatkannya ke potensi maksimal."
+              <GeometricCard
+                icon={<Code size={28} strokeWidth={1.5} />}
+                number="P.03"
+                title="Custom Platforms"
+                desc="Rekayasa perangkat lunak spesifik untuk infrastruktur B2B dan alur kerja operasional perusahaan."
               />
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden bg-bg-main text-tertiary border-t border-white/5">
-        <div className="absolute inset-0 opacity-20 circuit-pattern"></div>
-        <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-linear-to-br from-primary to-secondary mb-8 shadow-xl shadow-primary/30">
-            <Zap className="text-white" size={32} />
-          </div>
-          <h2 className="text-4xl md:text-6xl font-heading font-black mb-6">Siap Jadikan UMKM <br />Anda Juara Digital?</h2>
-          <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto text-balance">
-            Jangan biarkan bisnis Anda tertinggal. Bergabung bersama puluhan pebisnis Sumatera Barat lainnya yang sudah percaya pada kualitas solusi kami.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary hover:bg-[#108c83] text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_20px_rgba(19,168,158,0.4)] hover:shadow-[0_0_30px_rgba(19,168,158,0.6)] hover:-translate-y-1">
-              Hubungi Kami Sekarang
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-bg-main text-white/50 pt-20 pb-10 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-12 mb-16">
-            <div className="col-span-1 md:col-span-2">
-              <div className="mb-6">
-                <Image
-                  src="/logo-no-bg.png"
-                  alt="BKTech Logo"
-                  width={200}
-                  height={50}
-                  className="h-10 object-contain w-auto opacity-80"
-                />
+          {/* Call to Action Data-Driven */}
+          <section className="py-32 border-y border-navy-border relative overflow-hidden bg-navy-main">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(28,37,65,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(28,37,65,0.4)_1px,transparent_1px)] bg-size-[40px_40px]"></div>
+            <div className="max-w-3xl mx-auto px-6 relative z-10 text-center">
+              <div className="w-16 h-16 border-2 border-accent rotate-45 mx-auto flex items-center justify-center mb-12 bg-navy-deep">
+                <RefreshCw size={24} className="text-accent -rotate-45" />
               </div>
-              <p className="max-w-sm mb-6 text-balance">
-                Software house kebanggaan Sumatera Barat. Menghadirkan solusi website dan aplikasi berkualitas tinggi untuk mentransformasi pariwisata dan UMKM di Ranah Minang.
+              <h2 className="text-4xl lg:text-5xl font-heading font-black text-gray-soft uppercase mb-8">
+                Initiate System Architecture
+              </h2>
+              <p className="text-gray-dark mb-12 text-lg">
+                Mari kita diskusikan parameter teknis dan fungsional dari kebutuhan digital UMKM atau perusahaan Anda. Kami siap merancang cetak biru yang presisi.
+              </p>
+              <div className="inline-block p-1 border border-navy-border bg-navy-deep clip-angular">
+                <button className="bg-accent text-navy-deep px-10 py-5 uppercase tracking-widest font-bold text-sm hover:bg-accent-hover transition-colors flex items-center gap-3 clip-angular shadow-[0_0_20px_rgba(255,159,28,0.2)]">
+                  Schedule Consultation <ArrowUpRight size={18} />
+                </button>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      {/* Footer Minimal Corporate */}
+      <footer className="bg-navy-deep border-t border-navy-light/50 relative z-20">
+        <div className="max-w-[1440px] mx-auto px-8 md:px-16 py-20">
+          <div className="grid md:grid-cols-12 gap-12 md:gap-8">
+            <div className="md:col-span-5">
+              <Image
+                src="/logo-no-bg.png"
+                alt="BKTech Logo"
+                width={180}
+                height={45}
+                className="h-10 object-contain w-auto opacity-70 mb-8 filter grayscale hover:grayscale-0 transition-all duration-500"
+              />
+              <p className="text-sm text-gray-dark max-w-sm uppercase tracking-wide leading-relaxed">
+                INTEGRATING MINANGKABAU CULTURAL HERITAGE WITH DIGITAL ENGINEERING EXCELLENCE.
               </p>
             </div>
-            <div>
-              <h4 className="font-heading font-bold text-tertiary mb-6">Layanan</h4>
-              <ul className="space-y-3 text-sm">
-                <li><Link href="#" className="hover:text-primary transition-colors">Sistem POS UMKM</Link></li>
-                <li><Link href="#" className="hover:text-primary transition-colors">Web Profil & Pariwisata</Link></li>
-                <li><Link href="#" className="hover:text-primary transition-colors">Pengembangan Aplikasi Kustom</Link></li>
-                <li><Link href="#" className="hover:text-primary transition-colors">UI/UX Design</Link></li>
+
+            <div className="md:col-span-2 md:col-start-7">
+              <h5 className="text-gray-soft font-bold uppercase tracking-widest text-xs mb-6">Directory</h5>
+              <ul className="space-y-4 text-sm text-gray-dark">
+                <li><Link href="#" className="hover:text-accent transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-accent inline-block"></span> Portfolio</Link></li>
+                <li><Link href="#" className="hover:text-accent transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-accent inline-block"></span> Insights</Link></li>
+                <li><Link href="#" className="hover:text-accent transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-accent inline-block"></span> Architecture</Link></li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-heading font-bold text-tertiary mb-6">Kontak</h4>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-start gap-2">
-                  <MapPin size={16} className="text-secondary shrink-0 mt-0.5" />
-                  <span>Jl. Khatib Sulaiman No. 1, Padang, Sumatera Barat 25136</span>
-                </li>
-                <li>hello@bktech.id</li>
-                <li>+62 811-0000-0000</li>
-              </ul>
+
+            <div className="md:col-span-4 pl-0 md:pl-8 lg:border-l border-navy-border">
+              <h5 className="text-gray-soft font-bold uppercase tracking-widest text-xs mb-6">Headquarters</h5>
+              <div className="text-sm text-gray-dark space-y-2 uppercase tracking-wide">
+                <p>Jl. Khatib Sulaiman No. 1</p>
+                <p>Padang, Sumatera Barat</p>
+                <p>Indonesia 25136</p>
+                <p className="mt-6 text-accent">INIT@BKTECH.ID</p>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 text-sm">
-            <p>&copy; 2026 BKTech Indonesia. All rights reserved.</p>
-            <div className="flex items-center gap-4 mt-4 md:mt-0">
-              <Link href="#" className="hover:text-tertiary transition-colors">Instagram</Link>
-              <Link href="#" className="hover:text-tertiary transition-colors">LinkedIn</Link>
+        </div>
+
+        <div className="border-t border-navy-border bg-navy-main">
+          <div className="max-w-[1440px] mx-auto px-8 md:px-16 py-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-dark tracking-widest uppercase">
+            <p>&copy; {new Date().getFullYear()} BKTech Engineering. All Rights Reserved.</p>
+            <div className="flex gap-8 mt-4 md:mt-0">
+              <Link href="#" className="hover:text-accent">Dribbble</Link>
+              <Link href="#" className="hover:text-accent">LinkedIn</Link>
+              <Link href="#" className="hover:text-accent">GitHub</Link>
             </div>
           </div>
         </div>
@@ -324,38 +315,27 @@ export default function Home() {
   );
 }
 
-// Utility Components
-function Stat({ label, value }: { label: string, value: string }) {
+// Geometric Service Card
+function GeometricCard({ icon, title, desc, number, center = false }: { icon: ReactNode, title: string, desc: string, number: string, center?: boolean }) {
   return (
-    <div className="flex flex-col items-center text-center p-4">
-      <span className="font-heading font-black text-4xl text-transparent bg-clip-text bg-linear-to-b from-white to-white/70 mb-2">{value}</span>
-      <span className="text-sm font-medium text-white/50 uppercase tracking-wider">{label}</span>
-    </div>
-  );
-}
+    <motion.div variants={fadeUp} className={`relative p-12 bg-navy-main hover:bg-navy-deep transition-colors duration-500 group ${center ? 'md:border-x border-y md:border-y-0 border-navy-border' : ''}`}>
+      <div className="absolute top-0 left-0 w-full h-1 bg-accent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
 
-function ServiceCard({ icon, title, desc }: { icon: ReactNode, title: string, desc: string }) {
-  return (
-    <motion.div variants={fadeIn} className="bg-white/5 p-8 rounded-3xl border border-white/10 shadow-sm hover:shadow-[0_0_30px_rgba(15,117,188,0.15)] hover:border-secondary/30 hover:-translate-y-1 transition-all duration-300 group">
-      <div className="w-14 h-14 rounded-2xl bg-white/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-        {icon}
+      <div className="flex justify-between items-start mb-16">
+        <div className="text-accent">
+          {icon}
+        </div>
+        <div className="text-navy-border font-heading font-black text-2xl group-hover:text-navy-light transition-colors">
+          {number}
+        </div>
       </div>
-      <h3 className="font-heading font-bold text-xl text-tertiary mb-4">{title}</h3>
-      <p className="text-white/70 leading-relaxed text-balance">{desc}</p>
+
+      <h4 className="font-heading font-bold text-xl text-gray-soft uppercase mb-4 tracking-wide group-hover:text-accent transition-colors">{title}</h4>
+      <p className="text-gray-dark text-sm leading-relaxed">{desc}</p>
+
+      <div className="absolute bottom-12 right-12 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+        <ArrowUpRight className="text-accent" />
+      </div>
     </motion.div>
-  );
-}
-
-function FeatureItem({ title, desc }: { title: string, desc: string }) {
-  return (
-    <div className="flex gap-4">
-      <div className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0 mt-1">
-        <ArrowRight size={14} />
-      </div>
-      <div>
-        <h4 className="font-heading font-bold text-xl text-tertiary mb-2">{title}</h4>
-        <p className="text-white/70 leading-relaxed text-balance">{desc}</p>
-      </div>
-    </div>
   );
 }
