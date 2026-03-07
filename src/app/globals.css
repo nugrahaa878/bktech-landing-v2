@@ -4,21 +4,22 @@
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   
-  --color-navy-deep: #050A15;
-  --color-navy-main: #0B132B;
-  --color-navy-light: #1C2541;
-  --color-navy-border: #2A3655;
+  --color-ulin: #161A18;
+  --color-ulin-light: #2C3532;
+  --color-forest: #1A362D; 
+  --color-forest-dark: #0F211C;
+  --color-stone: #E5E9E7;
+  --color-stone-dark: #7A8782;
+  --color-stone-deep: #4A5651;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F1D570;
   
-  --color-gray-soft: #EAEBEE;
-  --color-gray-dark: #8E9BAE;
-  
-  --color-accent: #FF9F1C;
-  --color-accent-hover: #E88C15;
+  --color-sand: #F8FAF9;
 }
 
 :root {
-  --background: var(--color-navy-deep);
-  --foreground: var(--color-gray-soft);
+  --background: var(--color-sand);
+  --foreground: var(--color-ulin);
 }
 
 body {
@@ -26,38 +27,50 @@ body {
   color: var(--foreground);
   font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), sans-serif;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
-/* Abstract Minangkabau Geometric Pattern (Singkarak/Carving inspired) */
-.ukiran-pattern {
+/* Textures */
+.texture-wood {
+  background-color: var(--color-ulin);
   background-image: 
-    linear-gradient(30deg, rgba(255,255,255,0.01) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.01) 87.5%, rgba(255,255,255,0.01)),
-    linear-gradient(150deg, rgba(255,255,255,0.01) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.01) 87.5%, rgba(255,255,255,0.01)),
-    linear-gradient(30deg, rgba(255,255,255,0.01) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.01) 87.5%, rgba(255,255,255,0.01)),
-    linear-gradient(150deg, rgba(255,255,255,0.01) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,0.01) 87.5%, rgba(255,255,255,0.01)),
-    linear-gradient(60deg, rgba(255,255,255,0.01) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.01) 75%, rgba(255,255,255,0.01)),
-    linear-gradient(60deg, rgba(255,255,255,0.01) 25%, transparent 25.5%, transparent 75%, rgba(255,255,255,0.01) 75%, rgba(255,255,255,0.01));
-  background-size: 80px 140px;
-  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.01 0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E");
 }
 
-.text-gradient {
+.texture-stone {
+  background-color: var(--color-stone);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+.texture-forest {
+  background-color: var(--color-forest);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+.text-gradient-gold {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(to right, var(--color-gray-soft), var(--color-gray-dark));
+  background-image: linear-gradient(to right, var(--color-gold), var(--color-gold-light));
 }
 
-.clip-angular {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+.text-gradient-stone {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, var(--color-ulin), var(--color-stone-deep));
 }
 
-.clip-angular-reverse {
-  clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
+.clip-asymmetric {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0 100%);
+}
+
+.clip-asymmetric-reverse {
+  clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%, 0 60px);
 }
