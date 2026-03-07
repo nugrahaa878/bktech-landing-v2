@@ -11,14 +11,14 @@ const staggerFade: Variants = {
 
 export function Services() {
   return (
-    <section id="layanan" className="py-24 relative z-10 font-sans">
+    <section id="layanan" className="py-12 md:py-24 relative z-10 font-sans">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="border-x border-charcoal-900/10 px-6 md:px-12 py-12">
+        <div className="border-x border-charcoal-900/10 px-4 md:px-12 py-8 md:py-12">
 
-          <div className="mb-16 md:flex justify-between items-end">
+          <div className="mb-12 md:mb-16 md:flex justify-between items-end">
             <div className="max-w-2xl">
-              <span className="uppercase tracking-widest text-terracotta text-xs font-semibold mb-4 block">Layanan Kami</span>
-              <h2 className="text-3xl md:text-5xl font-light text-charcoal-900 leading-tight">
+              <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Layanan Kami</span>
+              <h2 className="text-2xl md:text-5xl font-light text-charcoal-900 leading-tight">
                 <strong className="font-semibold">Arsitektur Digital</strong> yang Mendefinisikan Ulang Standar.
               </h2>
             </div>

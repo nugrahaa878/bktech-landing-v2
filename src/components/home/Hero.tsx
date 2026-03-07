@@ -15,33 +15,33 @@ const staggerFade: Variants = {
 
 export function Hero() {
   return (
-    <section className="px-6 md:px-12 grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+    <section className="px-4 md:px-12 grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
       <motion.div
         initial="hidden" animate="visible" variants={staggerFade}
-        className="max-w-2xl py-12"
+        className="max-w-2xl py-8 md:py-12"
       >
-        <motion.div variants={fadeUp} className="flex items-center gap-4 mb-8">
+        <motion.div variants={fadeUp} className="flex items-center gap-4 mb-6 md:mb-8">
           <div className="h-px w-8 bg-terracotta"></div>
-          <span className="uppercase tracking-widest text-terracotta text-xs font-semibold">
+          <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold">
             West Sumatra Digital Foundry
           </span>
         </motion.div>
 
-        <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-light leading-[1.15] mb-8 text-charcoal-900 tracking-tight">
+        <motion.h1 variants={fadeUp} className="text-3xl md:text-5xl lg:text-6xl font-light leading-[1.2] md:leading-[1.15] mb-6 md:mb-8 text-charcoal-900 tracking-tight">
           <strong className="font-semibold text-charcoal-900">Rekayasa Terukur.</strong> <br />
           Solusi Perangkat Lunak untuk Ruang Bisnis Modern.
         </motion.h1>
 
-        <motion.p variants={fadeUp} className="text-lg text-charcoal-700 leading-relaxed mb-12 max-w-lg">
+        <motion.p variants={fadeUp} className="text-base md:text-lg text-charcoal-700 leading-relaxed mb-8 md:mb-12 max-w-lg">
           Keahlian rekayasa perangkat lunak berskala global, ditempa dengan pemahaman tajam akan ekosistem UMKM dan pariwisata di Sumatera Barat. Kami membangun infrastruktur digital yang solid dan dapat diandalkan.
         </motion.p>
 
-        <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
-          <button className="bg-terracotta hover:bg-terracotta-hover text-white px-8 py-4 font-medium text-sm transition-all flex items-center justify-center gap-3 font-sans">
+        <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 md:gap-5">
+          <button className="bg-terracotta hover:bg-terracotta-hover text-white px-7 md:px-8 py-3.5 md:py-4 font-medium text-xs md:text-sm transition-all flex items-center justify-center gap-3 font-sans">
             Pelajari Layanan
             <ArrowRight size={16} />
           </button>
-          <button className="bg-transparent border border-charcoal-900/20 text-charcoal-900 hover:border-charcoal-900 px-8 py-4 font-medium text-sm transition-all flex items-center justify-center font-sans">
+          <button className="bg-transparent border border-charcoal-900/20 text-charcoal-900 hover:border-charcoal-900 px-7 md:px-8 py-3.5 md:py-4 font-medium text-xs md:text-sm transition-all flex items-center justify-center font-sans">
             Lihat Portofolio
           </button>
         </motion.div>
@@ -51,7 +51,7 @@ export function Hero() {
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="relative h-[600px] w-full"
+        className="relative h-[350px] md:h-[500px] lg:h-[600px] w-full"
       >
         {/* Structure Borders wrapping the image */}
         <div className="absolute top-4 left-4 w-full h-full border border-charcoal-900/10 weave-bg z-0 hidden md:block"></div>
