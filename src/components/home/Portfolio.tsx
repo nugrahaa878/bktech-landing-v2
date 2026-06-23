@@ -165,10 +165,8 @@ export function Portfolio() {
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                    className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-charcoal-900/40 group-hover:bg-transparent transition-colors duration-500"></div>
-
                   {/* Category Tag */}
                   <div className="absolute top-4 md:top-6 left-4 md:left-6 z-10">
                     <span className="bg-offwhite-200/90 backdrop-blur-sm text-charcoal-900 px-2 md:px-3 py-1 text-[9px] md:text-[10px] font-bold uppercase tracking-widest border border-charcoal-900/10">
