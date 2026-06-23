@@ -18,13 +18,13 @@ export function Experience() {
         <div className="border-x border-charcoal-900/10 px-4 md:px-12 py-8 md:py-12">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-5">
-              <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Engineered by Experts</span>
+              <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Dibangun oleh Ahli</span>
               <h2 className="text-2xl md:text-4xl font-light text-charcoal-900 leading-snug md:leading-tight mb-5 md:mb-6">
-                <strong className="font-semibold">DNA Startup Global</strong> <br />
-                Dalam Ekosistem Lokal.
+                <strong className="font-semibold">Pengalaman Startup Global</strong> <br />
+                untuk Bisnis Lokal.
               </h2>
               <p className="text-sm md:text-lg text-charcoal-700 leading-relaxed mb-4 lg:mb-0">
-                Tim inti kami terdiri dari praktisi teknologi yang telah lama menempa keahlian di berbagai perusahaan *unicorn* dan *startup* papan atas Indonesia. Kami membawa standar kualitas, kecepatan dan skalabilitas.
+                Tim inti kami adalah praktisi teknologi yang telah berpengalaman di berbagai perusahaan unicorn dan startup ternama Indonesia. Kami membawa standar kualitas, kecepatan, dan skalabilitas ke dalam setiap proyek.
               </p>
             </div>
 

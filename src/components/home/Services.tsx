@@ -19,7 +19,7 @@ export function Services() {
             <div className="max-w-2xl">
               <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Layanan Kami</span>
               <h2 className="text-2xl md:text-5xl font-light text-charcoal-900 leading-tight">
-                <strong className="font-semibold">Arsitektur Digital</strong> yang Mendefinisikan Ulang Standar.
+                <strong className="font-semibold">Solusi Digital</strong> yang Dirancang untuk Bisnis Anda.
               </h2>
             </div>
           </div>
@@ -30,23 +30,23 @@ export function Services() {
           >
             <StructuralCard
               icon={<Code strokeWidth={1} size={32} />}
-              title="Bespoke Software Development"
-              desc="Pengembangan aplikasi kustom berbasis web dan mobile untuk entitas bisnis. Dirancang sistematis dari fondasi untuk menangani alur kerja kompleks dan lalu-lintas data tinggi."
+              title="Pengembangan Perangkat Lunak Kustom"
+              desc="Aplikasi web dan mobile yang dirancang khusus untuk kebutuhan bisnis Anda. Dibangun dari awal untuk menangani alur kerja kompleks dan volume data tinggi."
             />
             <StructuralCard
               icon={<ShieldCheck strokeWidth={1} size={32} />}
               title="Sistem Manajemen Otomatis"
-              desc="Digitalisasi proses Point of Sales (POS) hingga manajemen rantai pasok. Menyediakan analitik komprehensif bagi UMKM untuk keakuratan audit perusahaan."
+              desc="Digitalisasi proses dari Point of Sales (POS) hingga manajemen rantai pasok. Dilengkapi analitik lengkap untuk membantu UMKM memantau kinerja dan audit dengan akurat."
             />
             <StructuralCard
               icon={<Smartphone strokeWidth={1} size={32} />}
-              title="Tourism Experience Portal"
-              desc="Etalase interaktif berkinerja tinggi bagi industri perjalanan wisata dan perhotelan Sumatera Barat untuk menyambut standar antarmuka mancanegara."
+              title="Portal Pariwisata Interaktif"
+              desc="Platform digital berperforma tinggi untuk industri wisata dan perhotelan Sumatera Barat, dengan standar antarmuka yang siap bersaing di tingkat global."
             />
             <StructuralCard
               icon={<UserCheck strokeWidth={1} size={32} />}
-              title="Konsultasi & Kepatuhan Arsitektur"
-              desc="Audit basis kode lama dan modernisasi infrastruktur yang ada untuk memastikan pergerakan aplikasi mulus, skalabel, serta bebas cacat kelemahan sistem."
+              title="Konsultasi & Modernisasi Sistem"
+              desc="Audit kode dan modernisasi infrastruktur existing untuk memastikan aplikasi Anda berjalan lancar, mudah dikembangkan, dan bebas dari celah keamanan."
             />
           </motion.div>
         </div>

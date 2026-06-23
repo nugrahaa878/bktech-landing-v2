@@ -136,10 +136,10 @@ export function Portfolio() {
 
           <div className="mb-12 md:mb-16 md:flex justify-between items-end">
             <div className="max-w-2xl">
-              <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Portofolio Terpilih</span>
+              <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Karya Terbaik Kami</span>
               <h2 className="text-2xl md:text-5xl font-light text-charcoal-900 leading-tight">
-                <strong className="font-semibold">Implementasi Nyata,</strong> <br />
-                Hasil yang Terukur.
+                <strong className="font-semibold">Hasil Nyata,</strong> <br />
+                Dampak yang Terukur.
               </h2>
             </div>
             <button className="hidden md:flex items-center gap-2 text-charcoal-700 hover:text-terracotta transition-colors text-sm font-semibold uppercase tracking-wider mb-2">
@@ -197,7 +197,7 @@ export function Portfolio() {
           {/* Mobile Only Button */}
           <div className="mt-12 md:hidden">
             <button className="w-full bg-charcoal-900 text-white py-4 font-semibold text-sm uppercase tracking-widest flex items-center justify-center gap-2">
-              Semua Proyek <ArrowUpRight size={16} />
+              Lihat Semua Proyek <ArrowUpRight size={16} />
             </button>
           </div>
         </div>

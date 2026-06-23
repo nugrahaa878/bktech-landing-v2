@@ -8,7 +8,7 @@ export function StatsDivider() {
       <div className="max-w-7xl mx-auto px-2 md:px-6">
         <div className="grid grid-cols-3 divide-x divide-charcoal-800/50">
           <Stat label="Pengalaman" value="5+" />
-          <Stat label="Client" value="120+" />
+          <Stat label="Klien" value="120+" />
           <Stat label="Kepuasan" value="99%" />
         </div>
       </div>
