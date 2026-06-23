@@ -83,3 +83,20 @@ body {
 .weave-bg {
   background-image: repeating-linear-gradient(45deg, var(--color-offwhite-300) 0, var(--color-offwhite-300) 1px, transparent 0, transparent 4px);
 }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 60s linear infinite;
+}
+
+.animate-scroll-left:hover {
+  animation-play-state: paused;
+}
