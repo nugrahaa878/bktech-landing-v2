@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BKtech - Software House",
   description: "BKTech menghadirkan solusi rekayasa perangkat lunak untuk transformasi digital di Sumatera Barat, mulai dari UMKM hingga industri pariwisata.",
+  alternates: { canonical: "/" },
 };
 
 import { Navbar } from "@/components/layout/Navbar";

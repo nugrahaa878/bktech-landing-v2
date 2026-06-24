@@ -6,6 +6,7 @@ import { ProjectsGrid } from "@/components/projects/ProjectsGrid";
 export const metadata: Metadata = {
   title: "Portofolio",
   description: "Kumpulan proyek BKTech dari berbagai sektor industri — rekayasa perangkat lunak yang presisi dan berdampak.",
+  alternates: { canonical: "/projects" },
 };
 
 export default function ProjectsPage() {

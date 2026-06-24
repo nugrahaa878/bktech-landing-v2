@@ -48,6 +48,36 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bktech.id"),
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bktech.id/#organization",
+      name: "BKTech",
+      url: "https://bktech.id",
+      logo: "https://bktech.id/logo-no-bg.png",
+      email: "hello@bktech.id",
+      description:
+        "Rekayasa perangkat lunak untuk transformasi digital di Sumatera Barat, mulai dari UMKM hingga industri pariwisata.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Padang",
+        addressRegion: "Sumatera Barat",
+        addressCountry: "ID",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bktech.id/#website",
+      url: "https://bktech.id",
+      name: "BKTech",
+      inLanguage: "id-ID",
+      publisher: { "@id": "https://bktech.id/#organization" },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -56,6 +86,10 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <body className={`${poppins.variable} font-sans bg-offwhite-200 text-charcoal-900 antialiased overflow-x-hidden`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
