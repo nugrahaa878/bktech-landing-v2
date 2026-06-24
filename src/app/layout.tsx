@@ -11,7 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "BKTech | Rekayasa Perangkat Lunak Sumatera Barat",
+    default: "BKTech | Software House",
     template: "%s | BKTech"
   },
   description: "Menghadirkan solusi digital yang presisi, andal, dan kultural untuk UMKM & pariwisata Sumatera Barat.",
@@ -26,26 +26,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://bktech-id.netlify.app",
-    title: "BKTech | Rekayasa Perangkat Lunak Sumatera Barat",
-    description: "Solusi digital presisi dan andal untuk UMKM & pariwisata Sumatera Barat.",
+    url: "https://bktech.id",
+    title: "BKTech | Software House",
+    description: "Solusi digital presisi dan andal untuk Bisnis anda.",
     siteName: "BKTech",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-images-bktech.png",
         width: 1200,
         height: 630,
-        alt: "BKTech - Rekayasa Perangkat Lunak Sumatera Barat",
+        alt: "BKTech - Software House",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BKTech | Rekayasa Perangkat Lunak Sumatera Barat",
-    description: "Solusi digital presisi dan andal untuk UMKM & pariwisata Sumatera Barat.",
-    images: ["/og-image.png"],
+    title: "BKTech | Software House",
+    description: "Solusi digital presisi dan andal untuk Bisnis anda.",
+    images: ["/og-images-bktech.png"],
   },
-  metadataBase: new URL("https://bktech-id.netlify.app"),
+  metadataBase: new URL("https://bktech.id"),
 };
 
 export default function RootLayout({
