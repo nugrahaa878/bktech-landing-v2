@@ -29,11 +29,11 @@ export function Hero() {
 
         <motion.h1 variants={fadeUp} className="text-3xl md:text-5xl lg:text-6xl font-light leading-[1.2] md:leading-[1.15] mb-6 md:mb-8 text-charcoal-900 tracking-tight">
           <strong className="font-semibold text-charcoal-900">Dibangun dengan Presisi.</strong> <br />
-          Solusi Digital untuk Bisnis yang Terus Berkembang.
+          Arsitektur Digital Tangguh untuk Bisnis yang Siap Melesat
         </motion.h1>
 
         <motion.p variants={fadeUp} className="text-base md:text-lg text-charcoal-700 leading-relaxed mb-8 md:mb-12 max-w-lg">
-          Kami memadukan standar rekayasa kelas dunia dengan pemahaman mendalam terhadap UMKM dan pariwisata Sumatera Barat — menghasilkan produk digital yang kokoh, efisien, dan siap berkembang bersama bisnis Anda.
+          Memadukan standar engineering papan atas dengan pemahaman mendalam terhadap lanskap lokal. Kami membangun produk digital yang efisien, adaptif, dan siap berkembang bersama bisnis Anda.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 md:gap-5">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pakar Solusi Digital Sumatera Barat | BKTech Hub",
+  title: "BKtech - Software House",
   description: "BKTech menghadirkan solusi rekayasa perangkat lunak untuk transformasi digital di Sumatera Barat, mulai dari UMKM hingga industri pariwisata.",
 };
 

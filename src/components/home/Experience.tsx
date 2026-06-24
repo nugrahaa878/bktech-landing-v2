@@ -1,14 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 const companies = [
-  { name: "Tokopedia", sector: "E-Commerce" },
-  { name: "Gojek", sector: "On-Demand" },
-  { name: "Traveloka", sector: "Travel Tech" },
-  { name: "Pashouses", sector: "PropTech" },
-  { name: "Makmur", sector: "FinTech" },
-  { name: "Bukalapak", sector: "E-Commerce" },
+  { name: "Tokopedia", sector: "E-Commerce", logo: "/logo/tokopedia.png" },
+  { name: "Gojek", sector: "On-Demand", logo: "/logo/gojek.svg" },
+  { name: "Ruang Guru", sector: "EdTech", logo: "/logo/ruangguru.svg" },
+  { name: "Xendit", sector: "FinTech", logo: "/logo/xendit.svg" },
+  { name: "Mekari", sector: "SaaS", logo: "/logo/mekari.jpeg" },
+  { name: "Pashouses", sector: "PropTech", logo: "/logo/pashouses.png" },
 ];
 
 export function Experience() {
@@ -35,10 +35,14 @@ export function Experience() {
                     key={company.name}
                     className="bg-offwhite-200 p-6 md:p-8 flex flex-col items-center justify-center group hover:bg-white transition-colors duration-300"
                   >
-                    {/* Placeholder for Circular Company Logo */}
-                    <div className="w-12 h-12 md:w-16 md:h-16 mb-4 rounded-full bg-charcoal-100/50 flex items-center justify-center relative overflow-hidden group-hover:bg-charcoal-100 transition-colors border border-charcoal-900/5">
-                      <div className="absolute inset-0 weave-bg opacity-10"></div>
-                      <span className="text-[8px] md:text-[10px] font-bold text-charcoal-400 uppercase tracking-widest relative z-10 text-center px-1">Logo</span>
+                    <div className="w-12 h-12 md:w-16 md:h-16 mb-4 rounded-full flex items-center justify-center relative overflow-hidden">
+                      <Image
+                        src={company.logo}
+                        alt={`${company.name} logo`}
+                        fill
+                        className="object-contain p-2"
+                        sizes="(max-width: 768px) 48px, 64px"
+                      />
                     </div>
 
                     <span className="text-charcoal-900 font-bold tracking-tighter text-lg md:text-xl group-hover:text-terracotta transition-colors text-center leading-tight">

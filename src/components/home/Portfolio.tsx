@@ -138,8 +138,8 @@ export function Portfolio() {
             <div className="max-w-2xl">
               <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Karya Terbaik Kami</span>
               <h2 className="text-2xl md:text-5xl font-light text-charcoal-900 leading-tight">
-                <strong className="font-semibold">Hasil Nyata,</strong> <br />
-                Dampak yang Terukur.
+                <strong className="font-semibold">Portofolio Kami,</strong> <br />
+                Dari berbagai sektor
               </h2>
             </div>
             <button className="hidden md:flex items-center gap-2 text-charcoal-700 hover:text-terracotta transition-colors text-sm font-semibold uppercase tracking-wider mb-2">
