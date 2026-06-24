@@ -49,7 +49,7 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a href="https://wa.me/6281268529556" target="_blank" rel="noopener noreferrer" className="hidden sm:block bg-charcoal-900 text-white px-5 md:px-6 py-2.5 md:py-3 font-semibold text-xs md:text-sm transition-colors hover:bg-terracotta shadow-sm uppercase tracking-widest">
+            <a href="https://wa.me/6281268529556?text=Halo%20BKTech%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pembuatan%20website%20untuk%20bisnis%20saya.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" rel="noopener noreferrer" className="hidden sm:block bg-charcoal-900 text-white px-5 md:px-6 py-2.5 md:py-3 font-semibold text-xs md:text-sm transition-colors hover:bg-terracotta shadow-sm uppercase tracking-widest">
               Konsultasi
             </a>
             <button
@@ -111,7 +111,7 @@ export function Navbar() {
               </div>
 
               <div className="mt-auto mb-10">
-                <a href="https://wa.me/6281268529556" target="_blank" rel="noopener noreferrer" className="w-full bg-charcoal-900 text-white py-4 font-bold text-xs uppercase tracking-[0.2em] shadow-lg hover:bg-terracotta transition-colors text-center">
+                <a href="https://wa.me/6281268529556?text=Halo%20BKTech%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pembuatan%20website%20untuk%20bisnis%20saya.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" rel="noopener noreferrer" className="w-full bg-charcoal-900 text-white py-4 font-bold text-xs uppercase tracking-[0.2em] shadow-lg hover:bg-terracotta transition-colors text-center">
                   Mulai Konsultasi
                 </a>
               </div>
