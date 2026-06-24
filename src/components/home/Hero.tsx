@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 15 },
@@ -56,10 +57,12 @@ export function Hero() {
         {/* Structure Borders wrapping the image */}
         <div className="absolute top-4 left-4 w-full h-full border border-charcoal-900/10 weave-bg z-0 hidden md:block"></div>
         <div className="songket-border-left songket-border-top relative w-full h-full bg-charcoal-800 z-10 overflow-hidden shadow-2xl">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/bukittinggi_workspace.png"
             alt="Modern Software Engineer Workspace in Bukittinggi"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-90 hover:opacity-100 transition-opacity duration-700 grayscale hover:grayscale-0"
           />
           {/* Subtle tint overlay to keep the grounded, monochromatic feel until hover */}

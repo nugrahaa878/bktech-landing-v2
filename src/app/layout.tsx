@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -9,13 +9,18 @@ const poppins = Poppins({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#16181b",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: "BKTech | Software House",
     template: "%s | BKTech"
   },
-  description: "Menghadirkan solusi digital yang presisi, andal, dan kultural untuk UMKM & pariwisata Sumatera Barat.",
-  keywords: ["Software Engineer Sumatera Barat", "BKTech", "Rekayasa Perangkat Lunak", "Solusi Digital UMKM", "Pariwisata Sumatera Barat", "Bukittinggi Tech"],
+  description: "BKTech — jasa pembuatan website di Sumatera Barat (Padang & Bukittinggi). Solusi digital presisi dan andal untuk UMKM, pariwisata, dan bisnis yang siap tumbuh.",
   authors: [{ name: "BKTech Team" }],
   creator: "BKTech",
   publisher: "BKTech",
@@ -28,7 +33,7 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: "https://bktech.id",
     title: "BKTech | Software House",
-    description: "Solusi digital presisi dan andal untuk Bisnis anda.",
+    description: "Jasa pembuatan website di Sumatera Barat — Padang & Bukittinggi. Solusi digital presisi dan andal untuk bisnis Anda.",
     siteName: "BKTech",
     images: [
       {
@@ -42,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "BKTech | Software House",
-    description: "Solusi digital presisi dan andal untuk Bisnis anda.",
+    description: "Jasa pembuatan website di Sumatera Barat — Padang & Bukittinggi. Solusi digital presisi dan andal untuk bisnis Anda.",
     images: ["/og-images-bktech.png"],
   },
   metadataBase: new URL("https://bktech.id"),
@@ -59,7 +64,12 @@ const jsonLd = {
       logo: "https://bktech.id/logo-no-bg.png",
       email: "hello@bktech.id",
       description:
-        "Rekayasa perangkat lunak untuk transformasi digital di Sumatera Barat, mulai dari UMKM hingga industri pariwisata.",
+        "Jasa pembuatan website di Sumatera Barat — melayani Padang, Bukittinggi, dan sekitarnya. Rekayasa perangkat lunak untuk transformasi digital UMKM hingga industri pariwisata.",
+      areaServed: [
+        { "@type": "City", name: "Padang" },
+        { "@type": "City", name: "Bukittinggi" },
+        { "@type": "State", name: "Sumatera Barat" },
+      ],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Padang",
