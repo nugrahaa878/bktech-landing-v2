@@ -26,6 +26,7 @@ export function Portfolio() {
   };
 
   const handlePointerDown = (e: React.PointerEvent) => {
+    if (e.pointerType !== "mouse") return;
     const container = scrollRef.current;
     if (!container) return;
     dragState.current = {
@@ -82,14 +83,14 @@ export function Portfolio() {
           <div className="relative">
             <button
               onClick={() => scrollByAmount("left")}
-              className="absolute -left-4 md:-left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
+              className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
               aria-label="Scroll left"
             >
               <ArrowLeft size={20} />
             </button>
             <button
               onClick={() => scrollByAmount("right")}
-              className="absolute -right-4 md:-right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
+              className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
               aria-label="Scroll right"
             >
               <ArrowRight size={20} />
@@ -101,9 +102,9 @@ export function Portfolio() {
               onPointerMove={handlePointerMove}
               onPointerUp={handlePointerUp}
               onPointerLeave={handlePointerUp}
-              className="overflow-x-auto -mx-10 px-10 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] cursor-grab active:cursor-grabbing touch-pan-y select-none"
+              className="overflow-x-auto -mx-6 px-6 md:-mx-10 md:px-10 scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:cursor-grab md:active:cursor-grabbing md:select-none"
             >
-              <div className="flex gap-10 md:gap-8 w-max">
+              <div className="flex gap-6 md:gap-8 w-max">
                 {projects.map((project, index) => (
                   <motion.div
                     key={project.title}
@@ -112,7 +113,7 @@ export function Portfolio() {
                     viewport={{ once: true }}
                     variants={fadeUp}
                     transition={{ delay: index * 0.05 }}
-                    className="group cursor-pointer w-[200px] md:w-[320px]"
+                    className="group cursor-pointer w-[220px] md:w-[320px] snap-start shrink-0"
                     onClick={(e) => handleCardClick(e, project)}
                   >
                     <div className="relative aspect-4/5 bg-charcoal-800 mb-5 md:mb-6 overflow-hidden songket-border-top songket-border-left">
