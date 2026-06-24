@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ProjectModal } from "@/components/ui/ProjectModal";
 
 interface Project {
@@ -22,32 +22,12 @@ const projects: Project[] = [
   {
     title: "Sistem Inventori UMKM",
     category: "Software Architecture",
-    description: "Digitalisasi stok dan pencatatan transaksi untuk jaringan ritel lokal di Padang.",
+    description: "Digitalisasi stok dan pencatatan transaksi untuk jaringan ritel lokal",
     longDescription: "Solusi manajemen stok yang dirancang khusus untuk menangani kompleksitas inventori UMKM retail. Sistem ini mengintegrasikan pemindaian barcode, pelacakan stok real-time, dan laporan audit bulanan otomatis yang membantu pemilik usaha memantau kinerja bisnis dari mana saja.",
     client: "Rantai Ritel Minang",
     date: "2024",
     techStack: ["Next.js", "Node.js", "PostgreSQL", "Docker"],
     image: "https://images.unsplash.com/photo-1586769852044-692d6e3703f0?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Portal Pariwisata Bukittinggi",
-    category: "Web Engineering",
-    description: "Platform pemesanan dan informasi destinasi wisata dengan standar antarmuka global.",
-    longDescription: "Membangun identitas digital untuk pariwisata daerah dengan fokus pada performa dan aksesibilitas internasional. Kami mengimplementasikan sistem optimasi gambar dan CDN global untuk memastikan akses cepat dari berbagai belahan dunia, lengkap dengan sistem manajemen konten (CMS) yang intuitif.",
-    client: "Dinas Pariwisata Daerah",
-    date: "2023",
-    techStack: ["TypeScript", "Next.js", "Prisma", "AWS"],
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=800&auto=format&fit=crop",
-  },
-  {
-    title: "Aplikasi Logistik Minang",
-    category: "Mobile Solutions",
-    description: "Infrastruktur pelacakan kiriman barang antar koto berbasis teknologi real-time.",
-    longDescription: "Aplikasi mobile yang menghubungkan pengusaha logistik lokal dengan sistem pelacakan armada yang presisi. Menggunakan teknologi WebSockets untuk pembaruan lokasi real-time dan algoritma pencarian rute tercepat untuk mengefisiensi biaya operasional distribusi di medan pegunungan.",
-    client: "Logistik Nusantara Padang",
-    date: "2024",
-    techStack: ["React Native", "Firebase", "Google Maps SDK"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
   },
   {
     title: "University of Indonesia Anesthesia Logbook",
@@ -128,6 +108,51 @@ const fadeUp = {
 
 export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const dragState = useRef({ startX: 0, scrollLeft: 0, isDragging: false, hasDragged: false });
+
+  const scrollByAmount = (direction: "left" | "right") => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const amount = container.clientWidth * 0.8;
+    container.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
+  };
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    dragState.current = {
+      startX: e.clientX,
+      scrollLeft: container.scrollLeft,
+      isDragging: true,
+      hasDragged: false,
+    };
+    container.setPointerCapture(e.pointerId);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent) => {
+    const container = scrollRef.current;
+    if (!container || !dragState.current.isDragging) return;
+    const dx = e.clientX - dragState.current.startX;
+    if (Math.abs(dx) > 5) dragState.current.hasDragged = true;
+    container.scrollLeft = dragState.current.scrollLeft - dx;
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    dragState.current.isDragging = false;
+    container.releasePointerCapture(e.pointerId);
+  };
+
+  const handleCardClick = (e: React.MouseEvent, project: Project) => {
+    if (dragState.current.hasDragged) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    setSelectedProject(project);
+  };
 
   return (
     <section id="klien" className="py-12 md:py-24 bg-offwhite-200 border-b border-charcoal-900/10 font-sans">
@@ -147,50 +172,74 @@ export function Portfolio() {
             </button>
           </div>
 
-          <div className="overflow-hidden -mx-6 px-6">
-            <div className="flex gap-10 md:gap-8 w-max animate-scroll-left">
-              {[...projects, ...projects].map((project, index) => (
-                <motion.div
-                  key={`${project.title}-${index}`}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeUp}
-                  transition={{ delay: index * 0.05 }}
-                  className="group cursor-pointer w-[280px] md:w-[320px]"
-                  onClick={() => setSelectedProject(project)}
-                >
-                  <div className="relative aspect-4/5 bg-charcoal-800 mb-5 md:mb-6 overflow-hidden songket-border-top songket-border-left">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="320px"
-                      className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
-                    />
-                    {/* Category Tag */}
-                    <div className="absolute top-4 md:top-6 left-4 md:left-6 z-10">
-                      <span className="bg-offwhite-200/90 backdrop-blur-sm text-charcoal-900 px-2 md:px-3 py-1 text-[9px] md:text-[10px] font-bold uppercase tracking-widest border border-charcoal-900/10">
-                        {project.category}
-                      </span>
-                    </div>
-                  </div>
+          <div className="relative">
+            <button
+              onClick={() => scrollByAmount("left")}
+              className="absolute -left-4 md:-left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
+              aria-label="Scroll left"
+            >
+              <ArrowLeft size={20} />
+            </button>
+            <button
+              onClick={() => scrollByAmount("right")}
+              className="absolute -right-4 md:-right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
+              aria-label="Scroll right"
+            >
+              <ArrowRight size={20} />
+            </button>
 
-                  <div className="flex justify-between items-start group">
-                    <div>
-                      <h3 className="text-lg md:text-xl font-semibold text-charcoal-900 mb-1 md:mb-2 group-hover:text-terracotta transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-xs md:text-sm text-charcoal-600 leading-relaxed max-w-[240px]">
-                        {project.description}
-                      </p>
+            <div
+              ref={scrollRef}
+              onPointerDown={handlePointerDown}
+              onPointerMove={handlePointerMove}
+              onPointerUp={handlePointerUp}
+              onPointerLeave={handlePointerUp}
+              className="overflow-x-auto -mx-10 px-10 scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] cursor-grab active:cursor-grabbing touch-pan-y select-none"
+            >
+              <div className="flex gap-10 md:gap-8 w-max">
+                {projects.map((project, index) => (
+                  <motion.div
+                    key={project.title}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
+                    transition={{ delay: index * 0.05 }}
+                    className="group cursor-pointer w-[200px] md:w-[320px]"
+                    onClick={(e) => handleCardClick(e, project)}
+                  >
+                    <div className="relative aspect-4/5 bg-charcoal-800 mb-5 md:mb-6 overflow-hidden songket-border-top songket-border-left">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        sizes="320px"
+                        className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
+                      />
+                      {/* Category Tag */}
+                      <div className="absolute top-4 md:top-6 left-4 md:left-6 z-10">
+                        <span className="bg-offwhite-200/90 backdrop-blur-sm text-charcoal-900 px-2 md:px-3 py-1 text-[9px] md:text-[10px] font-bold uppercase tracking-widest border border-charcoal-900/10">
+                          {project.category}
+                        </span>
+                      </div>
                     </div>
-                    <div className="p-2 border border-charcoal-900/10 group-hover:bg-terracotta group-hover:text-white transition-all duration-300">
-                      <ArrowUpRight size={18} />
+
+                    <div className="flex justify-between items-start group">
+                      <div>
+                        <h3 className="text-base md:text-xl font-semibold text-charcoal-900 mb-1 md:mb-2 group-hover:text-terracotta transition-colors">
+                          {project.title}
+                        </h3>
+                        <p className="text-[11px] md:text-sm text-charcoal-600 leading-relaxed max-w-[200px] md:max-w-[240px]">
+                          {project.description}
+                        </p>
+                      </div>
+                      <div className="p-2 border border-charcoal-900/10 group-hover:bg-terracotta group-hover:text-white transition-all duration-300">
+                        <ArrowUpRight size={18} />
+                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -208,6 +257,6 @@ export function Portfolio() {
         isOpen={!!selectedProject}
         onClose={() => setSelectedProject(null)}
       />
-    </section>
+    </section >
   );
 }
