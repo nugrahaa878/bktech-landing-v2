@@ -12,9 +12,9 @@ export function CallToAction() {
           Wujudkan sistem perangkat lunak yang stabil dan siap mendukung pertumbuhan bisnis Anda. Jadwalkan pertemuan dengan tim arsitek kami untuk diskusi lebih lanjut.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-charcoal-900 hover:bg-charcoal-800 text-white px-8 md:px-10 py-4 md:py-5 font-medium text-xs md:text-sm transition-all shadow-sm uppercase tracking-widest">
+          <a href="https://wa.me/6281268529556" target="_blank" rel="noopener noreferrer" className="bg-charcoal-900 hover:bg-charcoal-800 text-white px-8 md:px-10 py-4 md:py-5 font-medium text-xs md:text-sm transition-all shadow-sm uppercase tracking-widest">
             Jadwalkan Konsultasi
-          </button>
+          </a>
           <button className="bg-white border border-charcoal-900/10 hover:border-charcoal-900/30 text-charcoal-900 px-8 md:px-10 py-4 md:py-5 font-medium text-xs md:text-sm transition-all focus:outline-none shadow-sm uppercase tracking-widest">
             Hubungi Kami
           </button>
