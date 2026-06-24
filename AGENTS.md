@@ -32,8 +32,13 @@ There is no test framework configured.
 src/
 ├── app/                    # Next.js App Router
 │   ├── globals.css         # Tailwind v4 theme tokens + custom utilities
-│   ├── layout.tsx          # Root layout (Poppins font, metadata, body)
+│   ├── layout.tsx          # Root layout (Poppins font, metadata, viewport, JSON-LD, body)
 │   ├── page.tsx            # Home page (server component composing home/*)
+│   ├── not-found.tsx       # Branded 404 page (Navbar + Footer + bordered-column)
+│   ├── robots.ts           # /robots.txt (allow all + sitemap reference)
+│   ├── sitemap.ts          # /sitemap.xml (lists / and /projects)
+│   ├── icon.png            # Favicon (auto-detected by App Router)
+│   ├── apple-icon.png      # Apple touch icon, 180x180 (auto-detected)
 │   └── projects/page.tsx   # /projects — full portfolio grid (server component)
 ├── components/
 │   ├── home/               # Home page sections (Hero, Services, Portfolio, ...)
@@ -68,6 +73,18 @@ src/
 ### Images
 - Use `next/image` for all images. The `next.config.ts` allowlist only permits `images.unsplash.com` as a remote host — add new hosts there if needed.
 - Logo assets live in `public/logo/`. Other public assets in `public/`.
+- For `next/image` inside a relatively-positioned container, use `fill` with `sizes` (e.g. Hero uses `sizes="(max-width: 768px) 100vw, 50vw"`). Add `priority` to the LCP image above the fold.
+- App Router auto-detects `src/app/icon.png` (favicon) and `src/app/apple-icon.png` (180×180 Apple touch icon) — no manual `<link>` needed.
+
+### SEO
+- **Metadata**: every page (`src/app/**/page.tsx`) exports a `metadata` object. The root `layout.tsx` defines the `title.template` (`%s | BKTech`), `metadataBase` (`https://bktech.id`), default title/description, OpenGraph, Twitter card, and `robots`. Per-page metadata overrides title/description and sets `alternates.canonical`.
+- **Do not redeclare the full title on pages that should use the default** — set only a short `title` (template appends ` | BKTech`) or omit it entirely.
+- **Canonical URLs**: set `alternates: { canonical: "<path>" }` on every page (e.g. `"/"`, `"/projects"`). `metadataBase` resolves them to absolute URLs.
+- **Structured data (JSON-LD)**: `layout.tsx` injects `Organization` + `WebSite` schema via a `<script type="application/ld+json">`. The Organization includes `email`, `logo`, `address` (Padang, Sumatera Barat), and `areaServed` (Padang, Bukittinggi, Sumatera Barat). Update these if business info changes.
+- **Sitemap & robots**: `src/app/sitemap.ts` and `src/app/robots.ts` are App Router conventions that serve `/sitemap.xml` and `/robots.txt`. Add new routes to the sitemap array when pages are added.
+- **OG image**: `public/og-images-bktech.png` (1200×630) is referenced in OG + Twitter metadata. Keep the 1200×630 aspect if replacing it.
+- **Keywords**: Google ignores the `keywords` meta tag. Target keywords (e.g. "pembuatan website Sumatera Barat", "Padang", "Bukittinggi") are woven into the meta `description`, OG/Twitter descriptions, and JSON-LD `description`/`areaServed` instead.
+- **Viewport**: `layout.tsx` exports a separate `viewport: Viewport` (themeColor `#16181b`, width, initialScale). Next.js 16 requires viewport to be split out of metadata.
 
 ### Data
 - Project data is centralized in `src/data/projects.ts` (the `Project` interface + `projects` array). Import from there — do not redeclare the array in components. Both the home `Portfolio` carousel and `/projects` grid import from it.
