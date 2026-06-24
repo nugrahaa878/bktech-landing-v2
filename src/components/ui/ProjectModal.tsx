@@ -40,7 +40,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+        <div className="fixed inset-0 z-[100] flex items-start justify-center p-4 md:p-8 pt-28 md:pt-32 overflow-y-auto">
           {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -56,7 +56,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
-            className="relative w-full max-w-5xl max-h-[90vh] bg-offwhite-200 shadow-2xl overflow-hidden flex flex-col md:flex-row songket-border-top"
+            className="relative w-full max-w-5xl max-h-[calc(100vh-9rem)] md:max-h-[calc(100vh-10rem)] mb-8 bg-offwhite-200 shadow-2xl overflow-hidden flex flex-col md:flex-row songket-border-top"
           >
             {/* Close Button */}
             <button
