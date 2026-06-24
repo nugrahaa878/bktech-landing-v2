@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "id_ID",
     url: "https://bktech.id",
     title: "BKTech | Software House",
-    description: "Jasa pembuatan website di Sumatera Barat — Padang & Bukittinggi. Solusi digital presisi dan andal untuk bisnis Anda.",
+    description: "Solusi rekayasa perangkat lunak yang presisi dan andal untuk bisnis yang siap tumbuh.",
     siteName: "BKTech",
     images: [
       {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "BKTech | Software House",
-    description: "Jasa pembuatan website di Sumatera Barat — Padang & Bukittinggi. Solusi digital presisi dan andal untuk bisnis Anda.",
+    description: "Solusi rekayasa perangkat lunak yang presisi dan andal untuk bisnis yang siap tumbuh.",
     images: ["/og-images-bktech.png"],
   },
   metadataBase: new URL("https://bktech.id"),
