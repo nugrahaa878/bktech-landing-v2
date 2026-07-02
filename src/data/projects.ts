@@ -12,6 +12,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Grand Malindo Hotel",
+    category: "Hospitality",
+    description: "Luxury booking site for a highland retreat of suites and villas above Bukittinggi in the Minangkabau highlands of West Sumatra.",
+    longDescription: "An elegant marketing and booking website for Grand Malindo Hotel, a private highland retreat of eighteen suites and villas set 1,240m above Bukittinggi in the Minangkabau highlands of West Sumatra. The design channels quiet, unhurried luxury — volcanic ridgeline imagery, Padang haute cuisine, and locally-woven Pandai Sikek songket — into a refined, editorial layout. Features an availability checker with arrival/departure and guest selection, curated sections for the estate, rooms & suites, experiences, gallery, and getting-here directions, all wrapped in a sense-of-place narrative that positions the property as a house that belongs to the land.",
+    client: "Grand Malindo Hotel",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
+    link: "https://hotel-v1.bktech.id/",
+  },
+  {
+    title: "Bunda Hotel",
+    category: "Hospitality",
+    description: "Warm boutique heritage hotel website in old Padang, West Sumatra, beside the Batang Arau river.",
+    longDescription: "A warm, story-driven website for Bunda Hotel, a boutique heritage stay in a restored 1918 townhouse in the old town of Padang, West Sumatra, beside the Batang Arau river. The design captures the unhurried generosity of a Minang mother's house — 'bunda' means mother — with sunlit photography, editorial press mentions (Condé Nast Traveller, Monocle, Kinfolk), and the recurring welcome 'Sudah makan?'. Features a check-in/check-out availability form with guest selection, and sections for the house's story, twelve individually-named rooms & suites, experiences, gallery, and directions from Padang airport.",
+    client: "Bunda Hotel",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop",
+    link: "https://hotel-v2.bktech.id/",
+  },
+  {
     title: "DELÉ Mode",
     category: "Fashion E-Commerce",
     description: "Luxury haute couture e-commerce experience for a heritage fashion maison specializing in handcrafted, limited-edition garments.",
