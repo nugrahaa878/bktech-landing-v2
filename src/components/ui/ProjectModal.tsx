@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence, useDragControls } from "framer-motion";
-import { X, Calendar, Globe, Tag, Layers, UserCheck } from "lucide-react";
+import { X, Calendar, Tag, Layers, UserCheck, ArrowUpRight } from "lucide-react";
 import { useEffect } from "react";
 
 interface Project {
@@ -108,6 +108,19 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   {project.longDescription || project.description}
                 </p>
 
+                {/* Primary CTA: visit the live project */}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener"
+                    className="group flex items-center justify-center gap-2 w-full bg-terracotta text-white py-4 mb-8 font-bold text-sm uppercase tracking-widest shadow-lg shadow-terracotta/30 hover:bg-charcoal-900 transition-colors"
+                  >
+                    Kunjungi Website
+                    <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                )}
+
                 {/* Meta Info Grid */}
                 <div className="grid grid-cols-2 gap-5 py-6 border-y border-charcoal-900/10 mb-8">
                   <div className="space-y-1">
@@ -131,15 +144,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     </div>
                     <p className="font-semibold text-charcoal-800 text-sm">{project.category}</p>
                   </div>
-                  {project.link && (
-                    <div className="space-y-1">
-                      <div className="flex items-center gap-2 text-charcoal-400">
-                        <Globe size={14} className="text-terracotta" />
-                        <span className="text-[10px] uppercase font-bold tracking-widest">Situs</span>
-                      </div>
-                      <a href={project.link} target="_blank" rel="noopener" className="font-semibold text-terracotta hover:underline text-sm">Kunjungi Proyek</a>
-                    </div>
-                  )}
                 </div>
 
                 {/* Tech Stack */}
@@ -222,6 +226,19 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   {project.longDescription || project.description}
                 </p>
 
+                {/* Primary CTA: visit the live project */}
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener"
+                    className="group flex items-center justify-center gap-2 w-full bg-terracotta text-white py-4 mb-10 font-bold text-sm uppercase tracking-widest shadow-lg shadow-terracotta/30 hover:bg-charcoal-900 transition-colors"
+                  >
+                    Kunjungi Website
+                    <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                )}
+
                 {/* Meta Info Grid */}
                 <div className="grid grid-cols-2 gap-8 py-8 border-y border-charcoal-900/10 mb-10">
                   <div className="space-y-1">
@@ -245,15 +262,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     </div>
                     <p className="font-semibold text-charcoal-800">{project.category}</p>
                   </div>
-                  {project.link && (
-                    <div className="space-y-1">
-                      <div className="flex items-center gap-2 text-charcoal-400">
-                        <Globe size={14} className="text-terracotta" />
-                        <span className="text-[10px] uppercase font-bold tracking-widest">Situs</span>
-                      </div>
-                      <a href={project.link} target="_blank" rel="noopener" className="font-semibold text-terracotta hover:underline">Kunjungi Proyek</a>
-                    </div>
-                  )}
                 </div>
 
                 {/* Tech Stack */}

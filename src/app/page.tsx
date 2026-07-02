@@ -34,11 +34,11 @@ export default function Home() {
 
       <StatsDivider />
 
+      <Portfolio />
+
       <Experience />
 
       <Services />
-
-      <Portfolio />
 
       <Philosophy />
 

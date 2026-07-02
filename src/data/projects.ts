@@ -12,6 +12,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "DELÉ Mode",
+    category: "Fashion E-Commerce",
+    description: "Luxury haute couture e-commerce experience for a heritage fashion maison specializing in handcrafted, limited-edition garments.",
+    longDescription: "A luxury fashion e-commerce platform for DELÉ Mode, a heritage haute couture maison established in 1926. The storefront showcases handcrafted tailored outerwear, evening gowns, and bespoke couture pieces produced in deliberately limited editions. Designed with a minimalist, refined aesthetic featuring elegant typography, high-quality product photography, and generous white space to convey exclusivity and understated luxury. Includes complimentary global shipping, a 30-day returns flow, and personalized advisory services for a discerning clientele.",
+    client: "DELÉ Mode",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop",
+    link: "https://fashion.bktech.id/",
+  },
+  {
     title: "Sistem Inventori UMKM",
     category: "Software Architecture",
     description: "Digitalisasi stok dan pencatatan transaksi untuk jaringan ritel lokal",
@@ -81,4 +92,5 @@ export const projects: Project[] = [
     techStack: ["Laravel"],
     image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop",
   },
+
 ];

@@ -16,7 +16,7 @@ const fadeUp = {
 export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-  const dragState = useRef({ startX: 0, scrollLeft: 0, isDragging: false, hasDragged: false });
+  const dragState = useRef({ startX: 0, startY: 0, hasDragged: false });
 
   const scrollByAmount = (direction: "left" | "right") => {
     const container = scrollRef.current;
@@ -25,40 +25,28 @@ export function Portfolio() {
     container.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
   };
 
+  // Track touch movement so a swipe-to-scroll doesn't count as a tap.
   const handlePointerDown = (e: React.PointerEvent) => {
-    if (e.pointerType !== "mouse") return;
-    const container = scrollRef.current;
-    if (!container) return;
-    dragState.current = {
-      startX: e.clientX,
-      scrollLeft: container.scrollLeft,
-      isDragging: true,
-      hasDragged: false,
-    };
-    container.setPointerCapture(e.pointerId);
+    if (e.pointerType === "mouse") return;
+    dragState.current = { startX: e.clientX, startY: e.clientY, hasDragged: false };
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
-    const container = scrollRef.current;
-    if (!container || !dragState.current.isDragging) return;
+    if (e.pointerType === "mouse") return;
     const dx = e.clientX - dragState.current.startX;
-    if (Math.abs(dx) > 5) dragState.current.hasDragged = true;
-    container.scrollLeft = dragState.current.scrollLeft - dx;
+    const dy = e.clientY - dragState.current.startY;
+    if (Math.abs(dx) > 5 || Math.abs(dy) > 5) dragState.current.hasDragged = true;
   };
 
-  const handlePointerUp = (e: React.PointerEvent) => {
-    const container = scrollRef.current;
-    if (!container) return;
-    dragState.current.isDragging = false;
-    container.releasePointerCapture(e.pointerId);
+  // Touch: pointerup fires on the card; open only if it was a clean tap.
+  const handleCardTap = (e: React.PointerEvent, project: Project) => {
+    if (e.pointerType === "mouse") return;
+    if (dragState.current.hasDragged) return;
+    setSelectedProject(project);
   };
 
-  const handleCardClick = (e: React.MouseEvent, project: Project) => {
-    if (dragState.current.hasDragged) {
-      e.preventDefault();
-      e.stopPropagation();
-      return;
-    }
+  // Desktop: native click opens the modal (no drag-scroll to guard against).
+  const handleCardClick = (project: Project) => {
     setSelectedProject(project);
   };
 
@@ -100,9 +88,7 @@ export function Portfolio() {
               ref={scrollRef}
               onPointerDown={handlePointerDown}
               onPointerMove={handlePointerMove}
-              onPointerUp={handlePointerUp}
-              onPointerLeave={handlePointerUp}
-              className="overflow-x-auto -mx-6 px-6 md:-mx-10 md:px-10 scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:cursor-grab md:active:cursor-grabbing md:select-none"
+              className="overflow-x-auto overflow-y-hidden -mx-6 px-6 md:-mx-10 md:px-10 scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
             >
               <div className="flex gap-6 md:gap-8 w-max">
                 {projects.map((project, index) => (
@@ -114,7 +100,8 @@ export function Portfolio() {
                     variants={fadeUp}
                     transition={{ delay: index * 0.05 }}
                     className="group cursor-pointer w-[220px] md:w-[320px] snap-start shrink-0"
-                    onClick={(e) => handleCardClick(e, project)}
+                    onPointerUp={(e) => handleCardTap(e, project)}
+                    onClick={() => handleCardClick(project)}
                   >
                     <div className="relative aspect-4/5 bg-charcoal-800 mb-5 md:mb-6 overflow-hidden songket-border-top songket-border-left">
                       <Image
