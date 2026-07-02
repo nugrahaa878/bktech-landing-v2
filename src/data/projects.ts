@@ -23,6 +23,17 @@ export const projects: Project[] = [
     link: "https://fashion.bktech.id/",
   },
   {
+    title: "Academy Learning Center",
+    category: "Education Services",
+    description: "Modern marketing site for a trusted K-12 and university-prep tutoring center with 40+ years of experience.",
+    longDescription: "A modern, high-converting marketing website for Academy, a trusted learning center offering tutoring for Elementary, Junior & Senior High, and Gap Year students since 1985. The site showcases the brand's Super Teacher mentors from top universities, structured curriculum-aligned learning modules, progress tracking with regular tryouts, and one-on-one academic consultations. Features a bold hero with clear enrollment CTAs, trust indicators (4.9/5 student rating, 10,000+ students accepted to top universities), and sections for products, publications, careers, and contact — all wrapped in a fun, interactive, and polished visual style.",
+    client: "Academy",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop",
+    link: "https://academy-v1.bktech.id/",
+  },
+  {
     title: "Sistem Inventori UMKM",
     category: "Software Architecture",
     description: "Digitalisasi stok dan pencatatan transaksi untuk jaringan ritel lokal",
