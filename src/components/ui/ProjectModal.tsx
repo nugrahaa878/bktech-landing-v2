@@ -212,17 +212,17 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               </div>
 
               {/* Right: Project Details */}
-              <div className="w-1/2 overflow-y-auto p-12 bg-offwhite-200">
-                <div className="flex items-center gap-3 mb-8">
+              <div className="w-1/2 overflow-y-auto p-8 bg-offwhite-200">
+                <div className="flex items-center gap-3 mb-5">
                   <div className="w-8 h-px bg-terracotta"></div>
                   <span className="text-terracotta font-semibold uppercase text-xs tracking-widest">{project.category}</span>
                 </div>
 
-                <h2 className="text-4xl font-light text-charcoal-900 mb-6 tracking-tight">
+                <h2 className="text-3xl font-light text-charcoal-900 mb-4 tracking-tight">
                   {project.title}
                 </h2>
 
-                <p className="text-charcoal-700 leading-relaxed mb-10 text-lg">
+                <p className="text-charcoal-700 leading-relaxed mb-6 text-base">
                   {project.longDescription || project.description}
                 </p>
 
@@ -232,7 +232,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                     href={project.link}
                     target="_blank"
                     rel="noopener"
-                    className="group flex items-center justify-center gap-2 w-full bg-terracotta text-white py-4 mb-10 font-bold text-sm uppercase tracking-widest shadow-lg shadow-terracotta/30 hover:bg-charcoal-900 transition-colors"
+                    className="group flex items-center justify-center gap-2 w-full bg-terracotta text-white py-3.5 mb-6 font-bold text-sm uppercase tracking-widest shadow-lg shadow-terracotta/30 hover:bg-charcoal-900 transition-colors"
                   >
                     Kunjungi Website
                     <ArrowUpRight size={18} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -240,7 +240,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 )}
 
                 {/* Meta Info Grid */}
-                <div className="grid grid-cols-2 gap-8 py-8 border-y border-charcoal-900/10 mb-10">
+                <div className="grid grid-cols-2 gap-6 py-6 border-y border-charcoal-900/10 mb-6">
                   <div className="space-y-1">
                     <div className="flex items-center gap-2 text-charcoal-400">
                       <UserCheck size={14} className="text-terracotta" />
