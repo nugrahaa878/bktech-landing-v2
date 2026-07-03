@@ -45,6 +45,17 @@ export const projects: Project[] = [
     link: "https://hotel-v3.bktech.id/",
   },
   {
+    title: "Selaras Cliff",
+    category: "Hospitality",
+    description: "Barefoot-luxury booking site for a clifftop villa with an infinity pool above the Indian Ocean in Uluwatu, Bali.",
+    longDescription: "A bright, breezy website for Selaras Cliff, a whitewashed clifftop villa perched 40m above the surf on Bali's Bukit Peninsula in Uluwatu. The design captures slow barefoot days in harmony with the sea — 'selaras' means in tune — with airy ocean photography, an infinity-edge pool spilling into the horizon, and 270° ocean views. Features a check-in/check-out availability form with guest selection, four individually-named cliff-side suites and pool villas with per-night rates and occupancy details, and sections for the villa, experiences, gallery, and location.",
+    client: "Selaras Cliff",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop",
+    link: "https://hotel-v4.bktech.id/",
+  },
+  {
     title: "DELÉ Mode",
     category: "Fashion E-Commerce",
     description: "Luxury haute couture e-commerce experience for a heritage fashion maison specializing in handcrafted, limited-edition garments.",
