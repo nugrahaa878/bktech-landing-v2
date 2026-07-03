@@ -34,6 +34,17 @@ export const projects: Project[] = [
     link: "https://hotel-v2.bktech.id/",
   },
   {
+    title: "Kayon Ridge",
+    category: "Hospitality",
+    description: "Cozy timber villa retreat website on a pine-forest ridge above Lembang, West Java.",
+    longDescription: "An atmospheric website for Kayon Ridge, a warm timber villa retreat set at 1,300m on a pine-forest ridge above Lembang, West Java, 70 minutes from Bandung. The design leans into the 'come in from the cold, the fire's already lit' mood — timber, wool, and warm light — telling the story behind the name (kayon, from kayu/wood and the gunungan tree-of-life). Features a check-in/check-out availability form with guest counter, six individually-named timber rooms and villas with per-night rates and sleeps info, and sections for the ridge, days here, gallery, and getting-here directions.",
+    client: "Kayon Ridge",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?q=80&w=800&auto=format&fit=crop",
+    link: "https://hotel-v3.bktech.id/",
+  },
+  {
     title: "DELÉ Mode",
     category: "Fashion E-Commerce",
     description: "Luxury haute couture e-commerce experience for a heritage fashion maison specializing in handcrafted, limited-edition garments.",
