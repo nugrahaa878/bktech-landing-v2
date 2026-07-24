@@ -31,7 +31,7 @@ export function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 bg-offwhite-200/95 backdrop-blur-sm border-b border-charcoal-900/10 transition-all">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 md:h-24 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 h-14 md:h-24 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 relative z-10 group" onClick={() => setIsOpen(false)}>
             <Image
               src="/logo-no-bg.png"

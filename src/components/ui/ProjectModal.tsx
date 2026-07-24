@@ -26,13 +26,21 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   const dragControls = useDragControls();
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    if (!isOpen) return;
+
+    const scrollY = window.scrollY;
+    const { body } = document;
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+
     return () => {
-      document.body.style.overflow = "unset";
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      window.scrollTo(0, scrollY);
     };
   }, [isOpen]);
 
@@ -62,7 +70,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
-              className="relative w-full max-h-[92vh] bg-offwhite-200 rounded-t-3xl shadow-2xl overflow-hidden flex flex-col"
+              className="relative w-full h-[80vh] bg-offwhite-200 rounded-t-3xl shadow-2xl overflow-hidden flex flex-col"
             >
               {/* Drag handle */}
               <div
@@ -73,7 +81,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               </div>
 
               {/* Image hero */}
-              <div className="relative aspect-3/4 max-h-[45vh] shrink-0 bg-charcoal-800 overflow-hidden">
+              <div className="relative h-[38vh] shrink-0 bg-charcoal-800 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}

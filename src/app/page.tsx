@@ -23,7 +23,7 @@ export default function Home() {
 
       <Navbar />
 
-      <div className="relative z-10 pt-24 pb-0">
+      <div className="relative z-10 pt-16 md:pt-24 pb-0">
         <div className="max-w-7xl mx-auto px-6">
           {/* Main Layout Grid Structure */}
           <div className="border-x border-charcoal-900/10 md:min-h-screen md:pt-12 pb-12">
