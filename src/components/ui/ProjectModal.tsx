@@ -73,11 +73,11 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
               </div>
 
               {/* Image hero */}
-              <div className="relative h-44 shrink-0 bg-charcoal-800 overflow-hidden">
+              <div className="relative aspect-3/4 max-h-[45vh] shrink-0 bg-charcoal-800 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover grayscale-[0.2]"
+                  className="absolute inset-0 w-full h-full object-contain grayscale-[0.2]"
                 />
                 <div className="absolute inset-0 bg-charcoal-900/10 mix-blend-multiply" />
                 <button
@@ -87,10 +87,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 >
                   <X size={18} />
                 </button>
-                <div className="absolute bottom-4 left-4 right-4 p-4 border border-white/20 backdrop-blur-sm bg-black/20 text-white">
-                  <span className="text-[9px] uppercase tracking-widest font-bold text-white/60 mb-1 block">Visual Overview</span>
-                  <h3 className="text-lg font-semibold tracking-tight uppercase">{project.title}</h3>
-                </div>
               </div>
 
               {/* Scrollable details */}
@@ -205,10 +201,6 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   className="absolute inset-0 w-full h-full object-cover grayscale-[0.2]"
                 />
                 <div className="absolute inset-0 bg-charcoal-900/10 mix-blend-multiply" />
-                <div className="absolute bottom-6 left-6 right-6 p-6 border border-white/20 backdrop-blur-sm bg-black/20 text-white">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-white/60 mb-1 block">Visual Overview</span>
-                  <h3 className="text-xl font-semibold tracking-tight uppercase">{project.title}</h3>
-                </div>
               </div>
 
               {/* Right: Project Details */}
