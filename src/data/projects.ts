@@ -12,6 +12,39 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Jonifer Seragam",
+    category: "Fashion E-Commerce",
+    description: "Website marketing untuk konveksi seragam dan pakaian custom dengan estimasi harga instan dan pemesanan via WhatsApp.",
+    longDescription: "Website marketing yang fokus pada konversi untuk Jonifer Seragam, konveksi yang memproduksi kaos, seragam, dan selempang custom. Website ini dibangun dengan kalkulator estimasi harga instan yang memudahkan calon pembeli mengatur jumlah dan spesifikasi sebelum memesan langsung lewat WhatsApp, sehingga alur dari tanya harga sampai order jadi lebih cepat. Foto produk yang bersih dan tampilan katalog yang sederhana menjaga fokus tetap pada produksi pakaian custom yang cepat dan berkualitas premium.",
+    client: "Jonifer Seragam",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://ik.imagekit.io/cbadwplrt/portofolio/jonifer.png",
+    link: "http://joniferseragam.com/",
+  },
+  {
+    title: "Clerra",
+    category: "ESG Software",
+    description: "Software ESG Indonesia untuk otomasi pelaporan keberlanjutan dan kepatuhan regulasi.",
+    longDescription: "Website dan platform untuk Clerra, software ESG terkemuka di Indonesia yang membantu perusahaan mengotomasi pelaporan keberlanjutan dan menjaga kepatuhan terhadap POJK 51, PSPK, IFRS S1/S2, GRI, dan IDX ESG Metrics. Desain website menonjolkan positioning sebagai solusi ESG tepercaya dengan pesan yang jelas seputar kepatuhan regulasi, otomasi laporan, dan kemudahan pengelolaan data keberlanjutan bagi perusahaan di Indonesia.",
+    client: "Clerra",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://ik.imagekit.io/cbadwplrt/portofolio/Clerra%20Poster%20-%20Final.png",
+    link: "https://www.clerra.id/",
+  },
+  {
+    title: "Fu Wang",
+    category: "Entertainment & Leisure",
+    description: "Website reservasi dan aplikasi mobile Android & iOS untuk cafe mahjong premium dengan fasilitas VIP.",
+    longDescription: "Website marketing dan reservasi beserta aplikasi mobile Android & iOS untuk Fu Wang, cafe mahjong elektrik premium yang menawarkan ruangan VIP eksklusif untuk kenyamanan dan privasi bersama teman-teman. Website menampilkan menu & harga, alur reservasi online, dan galeri suasana cafe, sementara aplikasi mobile pendampingnya memudahkan pelanggan mencari teman mabar langsung dari genggaman. Desain mengusung nuansa premium dan eksklusif yang selaras dengan pengalaman bermain mahjong kelas atas.",
+    client: "Fu Wang",
+    date: "2025",
+    techStack: ["HTML", "CSS", "JavaScript", "Android", "iOS"],
+    image: "https://ik.imagekit.io/cbadwplrt/portofolio/Fu%20Wang%20-%20Portfolio%20Visual-selection.png",
+    link: "https://fuwang.id/",
+  },
+  {
     title: "Grand Malindo Hotel",
     category: "Hospitality",
     description: "Luxury booking site for a highland retreat of suites and villas above Bukittinggi in the Minangkabau highlands of West Sumatra.",
@@ -54,6 +87,17 @@ export const projects: Project[] = [
     techStack: ["Next.js"],
     image: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=800&auto=format&fit=crop",
     link: "https://hotel-v4.bktech.id/",
+  },
+  {
+    title: "RantauDrive",
+    category: "Hospitality",
+    description: "Self-drive car and scooter rental booking site serving Bukittinggi and the Harau Valley / Lake Maninjau highlands of West Sumatra.",
+    longDescription: "A conversational, trust-driven booking site for RantauDrive, a self-drive car and scooter rental service based in Bukittinggi, West Sumatra. The design leans into 'rented like it's from a local friend' — transparent daily pricing, an eight-vehicle fleet from Honda Brio hatchbacks to 7-seat MPVs and Honda PCX scooters, and a coverage map spanning the Bukittinggi hub, Harau Valley, Lake Maninjau, and Padang airport. Features a four-step booking flow, self-drive/chauffeur-driven/two-wheeler rental modes, add-on services like airport transfers and child seats, a pricing comparison table, and an FAQ covering documents, deposits, and fuel policy, backed by 24/7 WhatsApp support and a 4.9/5 rating from 320+ trips.",
+    client: "RantauDrive",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop",
+    link: "https://rental-v1.bktech.id/",
   },
   {
     title: "DELÉ Mode",
@@ -147,5 +191,4 @@ export const projects: Project[] = [
     techStack: ["Laravel"],
     image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop",
   },
-
 ];

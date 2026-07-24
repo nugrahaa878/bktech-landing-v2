@@ -52,7 +52,7 @@ export function ProjectsGrid() {
                 className="group cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
-                <div className="relative aspect-4/5 bg-charcoal-800 mb-5 md:mb-6 overflow-hidden songket-border-top songket-border-left">
+                <div className="relative aspect-3/4 bg-charcoal-800 mb-5 md:mb-6 overflow-hidden songket-border-top songket-border-left">
                   <Image
                     src={project.image}
                     alt={project.title}

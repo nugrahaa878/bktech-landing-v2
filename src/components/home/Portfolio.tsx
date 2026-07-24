@@ -15,6 +15,7 @@ const fadeUp = {
 
 export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const dragState = useRef({ startX: 0, startY: 0, hasDragged: false });
 
@@ -23,6 +24,12 @@ export function Portfolio() {
     if (!container) return;
     const amount = container.clientWidth * 0.8;
     container.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
+  };
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (!container) return;
+    setCanScrollLeft(container.scrollLeft > 100);
   };
 
   // Track touch movement so a swipe-to-scroll doesn't count as a tap.
@@ -69,13 +76,15 @@ export function Portfolio() {
           </div>
 
           <div className="relative">
-            <button
-              onClick={() => scrollByAmount("left")}
-              className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
-              aria-label="Scroll left"
-            >
-              <ArrowLeft size={20} />
-            </button>
+            {canScrollLeft && (
+              <button
+                onClick={() => scrollByAmount("left")}
+                className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
+                aria-label="Scroll left"
+              >
+                <ArrowLeft size={20} />
+              </button>
+            )}
             <button
               onClick={() => scrollByAmount("right")}
               className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-charcoal-900 text-white hover:bg-terracotta transition-colors border border-charcoal-900/10 shadow-lg cursor-pointer"
@@ -88,6 +97,7 @@ export function Portfolio() {
               ref={scrollRef}
               onPointerDown={handlePointerDown}
               onPointerMove={handlePointerMove}
+              onScroll={handleScroll}
               className="overflow-x-auto overflow-y-hidden -mx-6 px-6 md:-mx-10 md:px-10 scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
             >
               <div className="flex gap-6 md:gap-8 w-max">
@@ -103,7 +113,7 @@ export function Portfolio() {
                     onPointerUp={(e) => handleCardTap(e, project)}
                     onClick={() => handleCardClick(project)}
                   >
-                    <div className="relative aspect-4/5 bg-charcoal-800 mb-5 md:mb-6 overflow-hidden songket-border-top songket-border-left">
+                    <div className="relative aspect-3/4 bg-charcoal-800 mb-5 md:mb-6 overflow-hidden songket-border-top songket-border-left">
                       <Image
                         src={project.image}
                         alt={project.title}
