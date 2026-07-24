@@ -64,9 +64,9 @@ export function Portfolio() {
 
           <div className="mb-12 md:mb-16 md:flex justify-between items-end">
             <div className="max-w-2xl">
-              <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Karya Terbaik Kami</span>
+              <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Karya Terbaik Engineer Kami</span>
               <h2 className="text-2xl md:text-5xl font-light text-charcoal-900 leading-tight">
-                <strong className="font-semibold">Portofolio Kami,</strong> <br />
+                <strong className="font-semibold">Portofolio Engineer Kami,</strong> <br />
                 Dari berbagai sektor
               </h2>
             </div>
