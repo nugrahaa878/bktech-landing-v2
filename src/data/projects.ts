@@ -111,6 +111,17 @@ export const projects: Project[] = [
   //   link: "https://rental-v1.bktech.id/",
   // },
   {
+    title: "Elok Pelaminan",
+    category: "Wedding & Event Services",
+    description: "Website marketing untuk jasa dekorasi pelaminan dan sewa busana pernikahan adat Minang & modern di Bukittinggi.",
+    longDescription: "Website marketing untuk Elok Pelaminan, penyedia jasa dekorasi pelaminan dan sewa busana pernikahan adat Minangkabau maupun modern yang melayani Bukittinggi, Padang Panjang, Payakumbuh, dan sekitarnya. Website menampilkan galeri portofolio berisi belasan foto hasil dekorasi dari berbagai gaya — adat Minang, modern gold, tenda outdoor, hingga minimalis — serta testimoni pelanggan yang menonjolkan kerapian, ketepatan waktu, dan kualitas eksekusi desain. Konsultasi dan pemesanan dilakukan langsung lewat WhatsApp untuk pengalaman yang responsif dan personal.",
+    client: "Elok Pelaminan",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://ik.imagekit.io/cbadwplrt/portofolio/Elok%20Pelaminan%20-%20Portfolio%20Visual-selection.png",
+    link: "https://pelaminan-v1.bktech.id/",
+  },
+  {
     title: "Atelier Noire",
     category: "Fashion E-Commerce",
     description: "Pengalaman e-commerce haute couture mewah untuk maison fashion heritage yang mengkhususkan diri pada busana handmade edisi terbatas.",
