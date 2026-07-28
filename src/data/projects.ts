@@ -12,6 +12,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "RAC Capital Management",
+    category: "Financial Services",
+    description: "Website korporat untuk perusahaan manajemen investasi yang fokus pada penciptaan nilai jangka panjang dan manajemen risiko.",
+    longDescription: "Website korporat untuk RAC Capital Management, perusahaan manajemen investasi yang menghadirkan solusi investasi dan layanan keuangan menyeluruh dengan fokus pada penciptaan nilai jangka panjang dan manajemen risiko. Desain mengusung palet navy pekat dan aksen biru elektrik untuk membangun kesan kokoh, profesional, dan tepercaya, selaras dengan citra institusi keuangan kelas atas. Website menampilkan gambaran solusi investasi, manajemen portofolio, dan layanan wealth management bagi klien korporat maupun individu.",
+    client: "RAC Capital Management",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://ik.imagekit.io/cbadwplrt/portofolio/RAC%20Capital%20Management%20-%20Portfolio%20Visual-selection.png",
+    link: "https://racapital.co/",
+  },
+  {
     title: "Jonifer Seragam",
     category: "Fashion E-Commerce",
     description: "Website marketing untuk konveksi seragam dan pakaian custom dengan estimasi harga instan dan pemesanan via WhatsApp.",
