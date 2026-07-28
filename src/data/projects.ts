@@ -12,6 +12,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "KADIN UK",
+    category: "Government & Institutional",
+    description: "Website resmi perwakilan Kamar Dagang dan Industri Indonesia di Inggris, menjembatani kerja sama bisnis Indonesia-Inggris.",
+    longDescription: "Website resmi untuk KADIN UK, perwakilan Kamar Dagang dan Industri Indonesia (KADIN) di Inggris yang menjembatani hubungan bisnis antara Indonesia dan Inggris Raya. Website menampilkan profil organisasi, berita dan kegiatan seputar kerja sama ekonomi kedua negara, serta informasi kemitraan dan keanggotaan bagi pelaku usaha. Desain mengusung palet navy dan aksen kuning emas yang menghadirkan kesan resmi, institusional, dan tepercaya, selaras dengan identitas kelembagaan KADIN.",
+    client: "KADIN UK",
+    date: "2025",
+    techStack: ["Next.js"],
+    image: "https://ik.imagekit.io/cbadwplrt/portofolio/KADIN%20UK%20-%20Portfolio%20Visual-selection.png",
+    link: "https://kadin.uk/",
+  },
+  {
     title: "RAC Capital Management",
     category: "Financial Services",
     description: "Website korporat untuk perusahaan manajemen investasi yang fokus pada penciptaan nilai jangka panjang dan manajemen risiko.",

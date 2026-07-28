@@ -60,11 +60,6 @@ export function ProjectsGrid() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
                   />
-                  <div className="absolute top-4 md:top-6 left-4 md:left-6 z-10">
-                    <span className="bg-offwhite-200/90 backdrop-blur-sm text-charcoal-900 px-2 md:px-3 py-1 text-[9px] md:text-[10px] font-bold uppercase tracking-widest border border-charcoal-900/10">
-                      {project.category}
-                    </span>
-                  </div>
                 </div>
 
                 <div className="flex justify-between items-start group">
