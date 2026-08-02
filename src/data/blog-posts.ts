@@ -166,6 +166,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
       },
+      {
+        question: "Apa bedanya jasa pembuatan website dengan platform website builder (DIY) berlangganan?",
+        answer:
+          "Platform website builder mengharuskan Anda menyusun sendiri konten dan desain menggunakan template generik, dengan biaya langganan berjalan terus tanpa pendampingan lokal. Jasa pembuatan website seperti BKTech mengerjakan seluruhnya untuk Anda — mulai dari riset kebutuhan, desain, hingga peluncuran — dan tetap bisa dihubungi langsung untuk dukungan setelahnya, tanpa Anda perlu belajar mengoperasikan platform apa pun.",
+      },
     ],
   },
   {
@@ -267,6 +272,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
       },
+      {
+        question: "Apa bedanya jasa pembuatan website dengan platform website builder (DIY) berlangganan?",
+        answer:
+          "Platform website builder mengharuskan Anda menyusun sendiri konten dan desain menggunakan template generik, dengan biaya langganan berjalan terus tanpa pendampingan lokal. Jasa pembuatan website seperti BKTech mengerjakan seluruhnya untuk Anda — mulai dari riset kebutuhan, desain, hingga peluncuran — dan tetap bisa dihubungi langsung untuk dukungan setelahnya, tanpa Anda perlu belajar mengoperasikan platform apa pun.",
+      },
     ],
   },
   {
@@ -367,6 +377,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
       },
+      {
+        question: "Apa bedanya jasa pembuatan website dengan platform website builder (DIY) berlangganan?",
+        answer:
+          "Platform website builder mengharuskan Anda menyusun sendiri konten dan desain menggunakan template generik, dengan biaya langganan berjalan terus tanpa pendampingan lokal. Jasa pembuatan website seperti BKTech mengerjakan seluruhnya untuk Anda — mulai dari riset kebutuhan, desain, hingga peluncuran — dan tetap bisa dihubungi langsung untuk dukungan setelahnya, tanpa Anda perlu belajar mengoperasikan platform apa pun.",
+      },
     ],
   },
   {
@@ -465,6 +480,11 @@ export const blogPosts: BlogPost[] = [
         question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
         answer:
           "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
+      },
+      {
+        question: "Apa bedanya jasa pembuatan website dengan platform website builder (DIY) berlangganan?",
+        answer:
+          "Platform website builder mengharuskan Anda menyusun sendiri konten dan desain menggunakan template generik, dengan biaya langganan berjalan terus tanpa pendampingan lokal. Jasa pembuatan website seperti BKTech mengerjakan seluruhnya untuk Anda — mulai dari riset kebutuhan, desain, hingga peluncuran — dan tetap bisa dihubungi langsung untuk dukungan setelahnya, tanpa Anda perlu belajar mengoperasikan platform apa pun.",
       },
     ],
   },
@@ -565,6 +585,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
       },
+      {
+        question: "Apa bedanya jasa pembuatan website dengan platform website builder (DIY) berlangganan?",
+        answer:
+          "Platform website builder mengharuskan Anda menyusun sendiri konten dan desain menggunakan template generik, dengan biaya langganan berjalan terus tanpa pendampingan lokal. Jasa pembuatan website seperti BKTech mengerjakan seluruhnya untuk Anda — mulai dari riset kebutuhan, desain, hingga peluncuran — dan tetap bisa dihubungi langsung untuk dukungan setelahnya, tanpa Anda perlu belajar mengoperasikan platform apa pun.",
+      },
     ],
   },
   {
@@ -664,6 +689,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
       },
+      {
+        question: "Apa bedanya jasa pembuatan website dengan platform website builder (DIY) berlangganan?",
+        answer:
+          "Platform website builder mengharuskan Anda menyusun sendiri konten dan desain menggunakan template generik, dengan biaya langganan berjalan terus tanpa pendampingan lokal. Jasa pembuatan website seperti BKTech mengerjakan seluruhnya untuk Anda — mulai dari riset kebutuhan, desain, hingga peluncuran — dan tetap bisa dihubungi langsung untuk dukungan setelahnya, tanpa Anda perlu belajar mengoperasikan platform apa pun.",
+      },
     ],
   },
   {
@@ -762,6 +792,11 @@ export const blogPosts: BlogPost[] = [
         question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
         answer:
           "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
+      },
+      {
+        question: "Apa bedanya jasa pembuatan website dengan platform website builder (DIY) berlangganan?",
+        answer:
+          "Platform website builder mengharuskan Anda menyusun sendiri konten dan desain menggunakan template generik, dengan biaya langganan berjalan terus tanpa pendampingan lokal. Jasa pembuatan website seperti BKTech mengerjakan seluruhnya untuk Anda — mulai dari riset kebutuhan, desain, hingga peluncuran — dan tetap bisa dihubungi langsung untuk dukungan setelahnya, tanpa Anda perlu belajar mengoperasikan platform apa pun.",
       },
     ],
   },
