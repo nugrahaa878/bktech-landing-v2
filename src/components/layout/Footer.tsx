@@ -40,7 +40,7 @@ export function Footer() {
               <li><Link href="#" className="hover:text-terracotta transition-colors">Tentang Kami</Link></li>
               <li><Link href="#" className="hover:text-terracotta transition-colors">Metodologi Kerja</Link></li>
               <li><Link href="#" className="hover:text-terracotta transition-colors">Tim Rekayasa</Link></li>
-              <li><Link href="#" className="hover:text-terracotta transition-colors">Hubungi Kami</Link></li>
+              <li><Link href="/blog" className="hover:text-terracotta transition-colors">Blog</Link></li>
             </ul>
           </div>
 

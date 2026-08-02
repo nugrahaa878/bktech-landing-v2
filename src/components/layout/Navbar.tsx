@@ -46,6 +46,7 @@ export function Navbar() {
             <Link href="#layanan" className="hover:text-terracotta transition-colors">Layanan Kami</Link>
             <Link href="#klien" className="hover:text-terracotta transition-colors">Portofolio</Link>
             <Link href="#tim" className="hover:text-terracotta transition-colors">Tentang Industri</Link>
+            <Link href="/blog" className="hover:text-terracotta transition-colors">Blog</Link>
           </div>
 
           <div className="flex items-center gap-4">
@@ -106,6 +107,14 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   Tentang Industri
+                  <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </Link>
+                <Link
+                  href="/blog"
+                  className="hover:text-terracotta transition-colors border-b border-charcoal-900/5 pb-4 flex justify-between items-center group"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Blog
                   <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </Link>
               </div>
