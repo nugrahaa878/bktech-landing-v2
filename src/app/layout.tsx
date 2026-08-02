@@ -57,17 +57,25 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://bktech.id/#organization",
       name: "BKTech",
       url: "https://bktech.id",
       logo: "https://bktech.id/logo-no-bg.png",
+      image: "https://bktech.id/og-images-bktech.png",
       email: "hello@bktech.id",
+      telephone: "+6285117306806",
+      priceRange: "$$",
       description:
         "Jasa pembuatan website di Sumatera Barat — melayani Padang, Bukittinggi, dan sekitarnya. Rekayasa perangkat lunak untuk transformasi digital UMKM hingga industri pariwisata.",
       areaServed: [
         { "@type": "City", name: "Padang" },
         { "@type": "City", name: "Bukittinggi" },
+        { "@type": "City", name: "Payakumbuh" },
+        { "@type": "City", name: "Padang Panjang" },
+        { "@type": "City", name: "Solok" },
+        { "@type": "City", name: "Pariaman" },
+        { "@type": "City", name: "Batusangkar" },
         { "@type": "State", name: "Sumatera Barat" },
       ],
       address: {

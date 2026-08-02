@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Code, ShieldCheck, Smartphone, UserCheck } from "lucide-react";
+import { ArrowUpRight, Code, ShieldCheck, Smartphone, UserCheck } from "lucide-react";
+import Link from "next/link";
 import { StructuralCard } from "@/components/ui/Cards";
 
 const staggerFade: Variants = {
@@ -49,6 +50,18 @@ export function Services() {
               desc="Audit kode dan modernisasi infrastruktur existing untuk memastikan aplikasi Anda berjalan lancar, mudah dikembangkan, dan bebas dari celah keamanan."
             />
           </motion.div>
+
+          <div className="mt-10 md:mt-12 pt-8 border-t border-charcoal-900/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <p className="text-sm text-charcoal-600 max-w-lg">
+              Ingin tahu lebih detail soal jasa pembuatan website dan aplikasi mobile untuk bisnis Anda di Sumatera Barat?
+            </p>
+            <Link
+              href="/blog/tips-memilih-jasa-pembuatan-website-di-sumatera-barat"
+              className="inline-flex items-center gap-2 text-terracotta hover:text-terracotta-hover transition-colors text-sm font-semibold uppercase tracking-wider shrink-0"
+            >
+              Baca Panduan di Blog <ArrowUpRight size={18} />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

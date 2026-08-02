@@ -38,14 +38,14 @@ export async function generateMetadata({
       url: postUrl,
       title: post.title,
       description: post.excerpt,
-      images: [{ url: post.coverImage, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: "/og-images-bktech.png", width: 1200, height: 630, alt: post.title }],
       publishedTime: post.publishedAt,
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: [post.coverImage],
+      images: ["/og-images-bktech.png"],
     },
   };
 }
@@ -109,24 +109,45 @@ export default async function BlogDetailPage({
   }
 
   const postUrl = `${siteUrl}/blog/${post.slug}`;
-  const coverImageUrl = `${siteUrl}${post.coverImage}`;
+  const ogImageUrl = `${siteUrl}/og-images-bktech.png`;
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    image: [coverImageUrl],
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    author: [{ "@type": "Organization", name: "BKTech", url: siteUrl }],
-    publisher: {
-      "@type": "Organization",
-      name: "BKTech",
-      logo: { "@type": "ImageObject", url: `${siteUrl}/logo-no-bg.png` },
-    },
-    description: post.excerpt,
-    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
-    keywords: post.keywords.join(", "),
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${postUrl}#article`,
+        headline: post.title,
+        image: [ogImageUrl],
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        author: [{ "@type": "Organization", name: "BKTech", url: siteUrl }],
+        publisher: {
+          "@type": "Organization",
+          name: "BKTech",
+          logo: { "@type": "ImageObject", url: `${siteUrl}/logo-no-bg.png` },
+        },
+        description: post.excerpt,
+        mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+        keywords: post.keywords.join(", "),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Beranda", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${siteUrl}/blog` },
+          { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: post.faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: { "@type": "Answer", text: item.answer },
+        })),
+      },
+    ],
   };
 
   const otherPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
@@ -178,6 +199,26 @@ export default async function BlogDetailPage({
           <div className="prose max-w-none">
             {post.content.map((block, index) => renderBlock(block, index))}
           </div>
+
+          {post.faq.length > 0 && (
+            <div className="mt-4 mb-12">
+              <h2 className="text-2xl md:text-3xl font-semibold text-charcoal-900 mb-6">
+                Pertanyaan Umum
+              </h2>
+              <div className="space-y-4">
+                {post.faq.map((item, index) => (
+                  <div key={index} className="border border-charcoal-900/10 p-5 md:p-6">
+                    <h3 className="text-base md:text-lg font-semibold text-charcoal-900 mb-2">
+                      {item.question}
+                    </h3>
+                    <p className="text-sm md:text-base text-charcoal-700 leading-relaxed">
+                      {item.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="mt-12 border border-charcoal-900/10 bg-charcoal-900 text-white p-8 md:p-10">
             <h3 className="text-xl md:text-2xl font-semibold mb-3">

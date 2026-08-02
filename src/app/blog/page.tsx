@@ -36,7 +36,7 @@ export default function BlogPage() {
 
       <Navbar />
 
-      <div className="relative z-10 pt-24 pb-0">
+      <div className="relative z-10 pt-5 pb-0">
         <section className="py-12 md:py-24 border-b border-charcoal-900/10">
           <div className="max-w-7xl mx-auto px-6">
             <div className="border-x border-charcoal-900/10 px-4 md:px-12 py-8 md:py-12">

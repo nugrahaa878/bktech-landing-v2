@@ -17,6 +17,11 @@ export interface BlogParagraph {
 
 export type BlogBlock = BlogHeading | BlogParagraph | BlogListItem;
 
+export interface BlogFaqItem {
+  question: string;
+  answer: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -26,4 +31,5 @@ export interface BlogPost {
   coverImage: string;
   keywords: string[];
   content: BlogBlock[];
+  faq: BlogFaqItem[];
 }
