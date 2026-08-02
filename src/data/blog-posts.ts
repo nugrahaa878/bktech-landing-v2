@@ -8,7 +8,7 @@ export const blogPosts: BlogPost[] = [
     slug: "jasa-pembuatan-website-bukittinggi",
     title: "Jasa Pembuatan Website Bukittinggi Profesional untuk UMKM & Bisnis Pariwisata",
     excerpt:
-      "Cari jasa pembuatan website di Bukittinggi yang paham kebutuhan bisnis lokal? BKTech membangun website cepat, rapi, dan siap bersaing di pencarian Google untuk UMKM, hotel, dan usaha pariwisata di Bukittinggi.",
+      "Cari jasa pembuatan website di Bukittinggi yang paham kebutuhan bisnis lokal? BKTech membangun website cepat, rapi, dan siap bersaing di pencarian Google untuk UMKM, hotel, dan usaha pariwisata di Bukittinggi — lengkap dengan estimasi biaya dan proses kerja transparan.",
     city: "Bukittinggi",
     publishedAt: "2026-06-02T09:00:00.000Z",
     coverImage: "/bukittinggi_workspace.png",
@@ -17,15 +17,16 @@ export const blogPosts: BlogPost[] = [
       "jasa website bukittinggi",
       "buat website bukittinggi",
       "web developer bukittinggi",
+      "harga jasa pembuatan website bukittinggi",
     ],
     content: [
       {
         type: "paragraph",
-        text: "Bukittinggi adalah salah satu kota tujuan wisata dan pusat perdagangan terpenting di Sumatera Barat. Dari kawasan Jam Gadang hingga Pasar Atas, ribuan UMKM, toko oleh-oleh, homestay, hingga biro perjalanan bersaing memperebutkan perhatian wisatawan dan pelanggan setiap hari. Sayangnya, banyak dari usaha ini masih mengandalkan media sosial saja tanpa memiliki website resmi — padahal calon pelanggan, terutama wisatawan dari luar kota, sering mencari informasi lewat Google sebelum datang atau memesan.",
+        text: "Bukittinggi adalah salah satu kota tujuan wisata dan pusat perdagangan terpenting di Sumatera Barat. Dari kawasan Jam Gadang, Pasar Atas, Pasar Bawah, hingga kawasan Ngarai Sianok, ribuan UMKM, toko oleh-oleh, homestay, hingga biro perjalanan bersaing memperebutkan perhatian wisatawan dan pelanggan setiap hari. Sayangnya, banyak dari usaha ini masih mengandalkan media sosial saja tanpa memiliki website resmi — padahal calon pelanggan, terutama wisatawan dari luar kota, sering mencari informasi lewat Google sebelum datang atau memesan.",
       },
       {
         type: "paragraph",
-        text: "Di sinilah jasa pembuatan website Bukittinggi menjadi kebutuhan, bukan sekadar pelengkap. BKTech hadir sebagai software house lokal Sumatera Barat yang memahami karakter bisnis di Bukittinggi — mulai dari usaha kuliner khas, penginapan, hingga jasa wisata — dan menerjemahkannya menjadi website yang cepat, mudah ditemukan, dan mampu mengonversi pengunjung menjadi pelanggan.",
+        text: "Di sinilah jasa pembuatan website Bukittinggi menjadi kebutuhan, bukan sekadar pelengkap. BKTech hadir sebagai software house lokal Sumatera Barat yang memahami karakter bisnis di Bukittinggi — mulai dari usaha kuliner khas, penginapan, hingga jasa wisata — dan menerjemahkannya menjadi website yang cepat, mudah ditemukan, dan mampu mengonversi pengunjung menjadi pelanggan. Berbeda dari layanan yang hanya menempelkan nama kota ke template generik, setiap website yang kami kerjakan disusun dari kebutuhan bisnis yang sesungguhnya, bukan sekadar mengganti nama lokasi di halaman yang sama untuk semua kota.",
       },
       {
         type: "heading",
@@ -51,6 +52,10 @@ export const blogPosts: BlogPost[] = [
         text: "Bukittinggi punya dua segmen pelanggan yang cukup berbeda: wisatawan yang datang musiman (terutama akhir pekan dan libur panjang) dan pelanggan lokal atau grosir dari kota sekitar seperti Payakumbuh dan Padang Panjang yang berbelanja rutin. Website yang efektif untuk kota ini perlu melayani kedua segmen sekaligus — informasi wisata yang menarik bagi pengunjung baru, sekaligus katalog dan harga yang jelas bagi pembeli berulang. Banyak jasa pembuatan website dari luar daerah tidak memperhitungkan nuansa ini dan hanya menghasilkan website generik yang kurang relevan dengan pola kunjungan musiman khas kota wisata.",
       },
       {
+        type: "paragraph",
+        text: "Pelaku usaha di sekitar Jam Gadang dan Pasar Atas juga menghadapi persaingan yang cukup padat dalam radius yang relatif kecil. Dalam kondisi ini, website bukan hanya soal 'ada atau tidak', tetapi soal seberapa cepat dan jelas informasi Anda dibanding puluhan usaha sejenis di sekitar. Foto produk berkualitas, harga yang transparan, dan cara pemesanan yang jelas sering menjadi faktor penentu wisatawan memilih satu usaha dibanding usaha lain yang lokasinya berdekatan.",
+      },
+      {
         type: "heading",
         level: 2,
         text: "Layanan Pembuatan Website BKTech untuk Bisnis Bukittinggi",
@@ -71,15 +76,49 @@ export const blogPosts: BlogPost[] = [
       {
         type: "heading",
         level: 2,
-        text: "Proses Kerja yang Transparan",
+        text: "Estimasi Biaya Jasa Pembuatan Website di Bukittinggi",
       },
       {
         type: "paragraph",
-        text: "Sebagai jasa pembuatan website Bukittinggi yang berbasis di Sumatera Barat, kami bisa bertemu langsung dengan klien untuk diskusi kebutuhan, bukan hanya komunikasi jarak jauh. Proses kami dimulai dari pemahaman kebutuhan bisnis, perancangan struktur dan desain, pengembangan, hingga pengujian sebelum website diluncurkan. Kami juga memastikan website dioptimasi untuk performa cepat dan tampil baik di perangkat mobile, karena mayoritas pengunjung mengakses lewat ponsel.",
+        text: "Salah satu pertanyaan yang paling sering muncul saat mencari jasa pembuatan website adalah soal biaya, namun banyak penyedia jasa tidak transparan soal ini di halaman layanan mereka. Sebagai gambaran umum, website company profile atau katalog produk sederhana dengan beberapa halaman biasanya berada di kisaran biaya paling terjangkau, sedangkan website dengan sistem toko online, integrasi pembayaran, atau fitur reservasi kamar membutuhkan investasi lebih besar karena kompleksitas pengembangan backend-nya. Biaya juga dipengaruhi oleh kebutuhan desain kustom, jumlah revisi, dan apakah domain serta hosting sudah termasuk dalam paket.",
       },
       {
         type: "paragraph",
-        text: "Setelah website diluncurkan, kami tidak langsung melepas klien begitu saja. Kami memastikan struktur judul halaman, deskripsi meta, dan tautan internal disusun dengan benar sejak awal, sehingga website memiliki fondasi teknis yang kuat untuk mulai bersaing di hasil pencarian Google terkait kata kunci bisnis dan lokasi Anda di Bukittinggi.",
+        text: "Kami selalu memberikan rincian biaya secara terbuka di awal diskusi — bukan hanya angka akhir, tetapi juga apa saja yang termasuk di dalamnya, sehingga pemilik usaha di Bukittinggi bisa membandingkan penawaran secara adil sebelum memutuskan. Hubungi kami untuk mendapatkan estimasi biaya sesuai kebutuhan spesifik bisnis Anda.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Proses Kerja Kami: Enam Tahap dari Konsultasi hingga Perawatan",
+      },
+      {
+        type: "paragraph",
+        text: "Sebagai jasa pembuatan website Bukittinggi yang berbasis di Sumatera Barat, kami bisa bertemu langsung dengan klien untuk diskusi kebutuhan, bukan hanya komunikasi jarak jauh. Proses kerja kami disusun dalam enam tahap yang jelas, sehingga klien selalu tahu di tahap mana proyek mereka berada:",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "Konsultasi & Analisis Kebutuhan — memahami jenis usaha, target pelanggan, dan tujuan utama website Anda di Bukittinggi, baik untuk menjaring wisatawan maupun pelanggan lokal berulang.",
+          "Perencanaan & Desain — menyusun struktur halaman dan tampilan visual yang mencerminkan identitas usaha, bukan template yang sama untuk semua klien.",
+          "Pengembangan — proses coding menggunakan teknologi modern, dioptimasi agar cepat diakses meski dengan koneksi seluler yang tidak selalu stabil di kawasan wisata.",
+          "Pengujian — memastikan seluruh halaman, formulir kontak, dan tautan berfungsi baik di berbagai perangkat sebelum website diluncurkan ke publik.",
+          "Peluncuran & Serah Terima — website resmi tayang, disertai panduan singkat agar tim Anda bisa mulai mengelola kontennya sendiri.",
+          "Dukungan Pascapeluncuran — pendampingan untuk pembaruan konten, perbaikan teknis, dan optimasi lanjutan agar website tetap kompetitif di hasil pencarian.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Kami juga memastikan struktur judul halaman, deskripsi meta, dan tautan internal disusun dengan benar sejak tahap pengembangan, sehingga website memiliki fondasi teknis yang kuat untuk mulai bersaing di hasil pencarian Google terkait kata kunci bisnis dan lokasi Anda di Bukittinggi — bukan sekadar tampil bagus secara visual namun sulit ditemukan calon pelanggan.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Apa yang Membedakan Kami dari Jasa Website Berbasis Template",
+      },
+      {
+        type: "paragraph",
+        text: "Banyak penyedia jasa pembuatan website beroperasi dengan model 'satu halaman untuk semua kota' — hanya mengganti nama lokasi di judul, sementara isi, struktur, dan bahkan foto yang ditampilkan persis sama untuk klien di kota manapun. Pendekatan ini memang efisien bagi penyedia jasa, tetapi menghasilkan website yang generik dan kurang meyakinkan bagi calon pelanggan yang jeli. BKTech memilih pendekatan sebaliknya: setiap proyek dimulai dari pemahaman spesifik terhadap usaha dan lokasi klien, sehingga hasil akhirnya benar-benar mencerminkan bisnis Anda di Bukittinggi, bukan salinan dari kota lain.",
       },
       {
         type: "heading",
@@ -88,7 +127,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Baik Anda pemilik usaha kuliner di kawasan Jam Gadang, pengelola homestay, atau biro perjalanan wisata, BKTech siap membantu menghadirkan website yang mencerminkan kualitas bisnis Anda. Hubungi tim kami untuk konsultasi kebutuhan website dan dapatkan penawaran yang sesuai skala usaha Anda.",
+        text: "Baik Anda pemilik usaha kuliner di kawasan Jam Gadang, pengelola homestay dekat Ngarai Sianok, atau biro perjalanan wisata, BKTech siap membantu menghadirkan website yang mencerminkan kualitas bisnis Anda. Hubungi tim kami untuk konsultasi kebutuhan website dan dapatkan penawaran yang sesuai skala usaha Anda.",
       },
     ],
     faq: [
@@ -96,6 +135,11 @@ export const blogPosts: BlogPost[] = [
         question: "Berapa lama waktu pengerjaan website di Bukittinggi?",
         answer:
           "Tergantung kompleksitas, umumnya website company profile atau katalog produk selesai dalam 2-4 minggu, sementara toko online dengan sistem pembayaran membutuhkan waktu lebih panjang.",
+      },
+      {
+        question: "Berapa kisaran biaya jasa pembuatan website di Bukittinggi?",
+        answer:
+          "Biaya bervariasi tergantung jenis website — company profile sederhana berada di kisaran paling terjangkau, sementara toko online dengan sistem pembayaran dan reservasi membutuhkan investasi lebih besar. Kami memberikan rincian biaya secara transparan di awal konsultasi.",
       },
       {
         question: "Apakah BKTech bisa bertemu langsung dengan klien di Bukittinggi?",
@@ -106,6 +150,21 @@ export const blogPosts: BlogPost[] = [
         question: "Apakah website yang dibuat bisa dikelola sendiri setelah selesai?",
         answer:
           "Ya, kami merancang website agar pemilik usaha bisa memperbarui informasi seperti harga, produk, dan berita terbaru secara mandiri tanpa harus bergantung pada developer.",
+      },
+      {
+        question: "Apa bedanya BKTech dengan jasa website yang menawarkan harga murah di semua kota?",
+        answer:
+          "Banyak penyedia jasa menggunakan template yang sama untuk semua kota dan hanya mengganti nama lokasi. Kami membangun setiap website dari kebutuhan spesifik bisnis dan karakter pasar Bukittinggi, bukan salinan generik dari kota lain.",
+      },
+      {
+        question: "Apakah website bisa disesuaikan untuk melayani wisatawan sekaligus pelanggan grosir lokal?",
+        answer:
+          "Bisa. Kami dapat merancang struktur website yang menampilkan informasi wisata menarik bagi pengunjung baru, sekaligus katalog dan harga yang jelas untuk pembeli lokal atau grosir yang berbelanja rutin.",
+      },
+      {
+        question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
+        answer:
+          "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
       },
     ],
   },
@@ -203,6 +262,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Ya, kami melayani berbagai skala bisnis termasuk startup yang membutuhkan website MVP untuk memvalidasi ide bisnis dengan cepat dan anggaran yang terkendali.",
       },
+      {
+        question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
+        answer:
+          "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
+      },
     ],
   },
   {
@@ -298,6 +362,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Website katalog sederhana umumnya bisa selesai dalam 1-3 minggu tergantung jumlah produk dan kebutuhan revisi desain.",
       },
+      {
+        question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
+        answer:
+          "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
+      },
     ],
   },
   {
@@ -391,6 +460,11 @@ export const blogPosts: BlogPost[] = [
         question: "Apakah layanan ini juga mencakup UMKM di luar sektor pendidikan?",
         answer:
           "Tentu. Kami juga melayani UMKM, usaha kreatif, dan bisnis lokal lain di Padang Panjang dengan kebutuhan website company profile maupun katalog produk.",
+      },
+      {
+        question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
+        answer:
+          "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
       },
     ],
   },
@@ -486,6 +560,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Bisa. Website yang teroptimasi untuk pencarian Google memungkinkan calon pembeli dari kota lain menemukan dan menghubungi bisnis Anda tanpa batasan lokasi.",
       },
+      {
+        question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
+        answer:
+          "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
+      },
     ],
   },
   {
@@ -580,6 +659,11 @@ export const blogPosts: BlogPost[] = [
         answer:
           "Ya, kami dapat membangun halaman menu digital lengkap dengan foto, harga, dan informasi kontak untuk reservasi atau pemesanan.",
       },
+      {
+        question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
+        answer:
+          "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
+      },
     ],
   },
   {
@@ -673,6 +757,11 @@ export const blogPosts: BlogPost[] = [
         question: "Apakah UMKM kerajinan di Tanah Datar bisa menjual produk lewat website?",
         answer:
           "Bisa. Kami dapat membangun katalog produk lengkap dengan foto dan cara pemesanan untuk memperluas jangkauan pasar UMKM kerajinan lokal.",
+      },
+      {
+        question: "Kenapa ada jasa pembuatan website yang menawarkan harga sangat murah tanpa rincian?",
+        answer:
+          "Waspadai penawaran 'website murah' yang tidak menyertakan rincian biaya jelas — biasanya biaya tersembunyi muncul kemudian untuk domain, hosting, atau setiap revisi. Kami selalu menjelaskan apa saja yang termasuk dalam setiap penawaran harga sejak awal, bukan hanya angka tanpa konteks, sehingga Anda tahu persis nilai yang didapat.",
       },
     ],
   },
