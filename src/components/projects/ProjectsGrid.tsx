@@ -33,7 +33,7 @@ export function ProjectsGrid() {
                 Dari berbagai sektor
               </h2>
               <p className="text-sm md:text-base text-charcoal-600 leading-relaxed mt-4 md:mt-6 max-w-xl">
-                Kumpulan proyek yang membuktikan komitmen kami terhadap rekayasa perangkat lunak yang presisi, andal, dan berdampak lintas industri.
+                Kumpulan proyek yang kami kerjakan bersama klien dari berbagai industri.
               </p>
             </div>
           </div>

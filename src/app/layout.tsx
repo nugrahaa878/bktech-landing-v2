@@ -17,10 +17,10 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "BKTech | Software House",
+    default: "BKTech | Technology Advisor",
     template: "%s | BKTech"
   },
-  description: "BKTech — jasa pembuatan website di Sumatera Barat (Padang & Bukittinggi). Solusi digital presisi dan andal untuk UMKM, pariwisata, dan bisnis yang siap tumbuh.",
+  description: "BKTech — Technology Advisor dan jasa pembuatan website di Sumatera Barat (Padang & Bukittinggi). Kami bantu UMKM, pariwisata, dan bisnis lokal memilih serta membangun solusi digital yang tepat.",
   authors: [{ name: "BKTech Team" }],
   creator: "BKTech",
   publisher: "BKTech",
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://bktech.id",
-    title: "BKTech | Software House",
-    description: "Solusi rekayasa perangkat lunak yang presisi dan andal untuk bisnis yang siap tumbuh.",
+    title: "BKTech | Technology Advisor",
+    description: "Technology Advisor untuk bisnis di Sumatera Barat: konsultasi, website, dan aplikasi yang sesuai kebutuhan.",
     siteName: "BKTech",
     images: [
       {
         url: "/og-images-bktech.png",
         width: 1200,
         height: 630,
-        alt: "BKTech - Software House",
+        alt: "BKTech - Technology Advisor",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BKTech | Software House",
-    description: "Solusi rekayasa perangkat lunak yang presisi dan andal untuk bisnis yang siap tumbuh.",
+    title: "BKTech | Technology Advisor",
+    description: "Technology Advisor untuk bisnis di Sumatera Barat: konsultasi, website, dan aplikasi yang sesuai kebutuhan.",
     images: ["/og-images-bktech.png"],
   },
   metadataBase: new URL("https://bktech.id"),
@@ -67,7 +67,7 @@ const jsonLd = {
       telephone: "+6285117306806",
       priceRange: "$$",
       description:
-        "Jasa pembuatan website di Sumatera Barat — melayani Padang, Bukittinggi, dan sekitarnya. Rekayasa perangkat lunak untuk transformasi digital UMKM hingga industri pariwisata.",
+        "Technology Advisor dan jasa pembuatan website di Sumatera Barat — melayani Padang, Bukittinggi, dan sekitarnya. Konsultasi teknologi, website, dan aplikasi untuk UMKM hingga industri pariwisata.",
       areaServed: [
         { "@type": "City", name: "Padang" },
         { "@type": "City", name: "Bukittinggi" },

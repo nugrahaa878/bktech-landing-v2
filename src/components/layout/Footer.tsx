@@ -20,17 +20,17 @@ export function Footer() {
               />
             </div>
             <p className="text-xs md:text-sm text-offwhite-400 leading-relaxed max-w-xs">
-              Membangun fondasi digital yang kuat untuk UMKM dan Pariwisata Sumatera Barat melalui rekayasa perangkat lunak yang presisi dan filosofi kekeluargaan.
+              Membantu UMKM dan pelaku pariwisata Sumatera Barat memilih dan membangun teknologi yang tepat, dengan semangat kekeluargaan.
             </p>
           </div>
 
           <div>
             <h4 className="text-white font-bold uppercase tracking-widest text-[10px] md:text-xs mb-6 md:mb-8">Layanan Utama</h4>
             <ul className="space-y-3 md:space-y-4 text-xs md:text-sm text-offwhite-400">
-              <li><Link href="#" className="hover:text-terracotta transition-colors">Software Architecture</Link></li>
-              <li><Link href="#" className="hover:text-terracotta transition-colors">Digital Transformation</Link></li>
-              <li><Link href="#" className="hover:text-terracotta transition-colors">Cloud Infrastructure</Link></li>
-              <li><Link href="#" className="hover:text-terracotta transition-colors">Maintenance & Support</Link></li>
+              <li><Link href="#" className="hover:text-terracotta transition-colors">Konsultasi Teknologi</Link></li>
+              <li><Link href="#" className="hover:text-terracotta transition-colors">Website & Aplikasi</Link></li>
+              <li><Link href="#" className="hover:text-terracotta transition-colors">Sistem Operasional</Link></li>
+              <li><Link href="#" className="hover:text-terracotta transition-colors">Perawatan & Dukungan</Link></li>
             </ul>
           </div>
 
@@ -38,8 +38,8 @@ export function Footer() {
             <h4 className="text-white font-bold uppercase tracking-widest text-[10px] md:text-xs mb-6 md:mb-8">Perusahaan</h4>
             <ul className="space-y-3 md:space-y-4 text-xs md:text-sm text-offwhite-400">
               <li><Link href="#" className="hover:text-terracotta transition-colors">Tentang Kami</Link></li>
-              <li><Link href="#" className="hover:text-terracotta transition-colors">Metodologi Kerja</Link></li>
-              <li><Link href="#" className="hover:text-terracotta transition-colors">Tim Rekayasa</Link></li>
+              <li><Link href="#" className="hover:text-terracotta transition-colors">Cara Kerja</Link></li>
+              <li><Link href="#" className="hover:text-terracotta transition-colors">Tim Kami</Link></li>
               <li><Link href="/blog" className="hover:text-terracotta transition-colors">Blog</Link></li>
             </ul>
           </div>
@@ -55,7 +55,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-charcoal-800 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[10px] uppercase tracking-widest text-offwhite-500 font-medium">
-            © 2024 BKTECH SYSTEMS. DUKUNGAN LOKAL, KUALITAS GLOBAL.
+            © 2026 BKTech. Technology Advisor dari Sumatera Barat.
           </p>
           <div className="flex gap-6 text-offwhite-500">
             <Link href="#" className="hover:text-white transition-colors"><Instagram size={18} /></Link>

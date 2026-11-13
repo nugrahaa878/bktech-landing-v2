@@ -4,14 +4,14 @@ export function CallToAction() {
   return (
     <section className="py-16 md:py-32 relative overflow-hidden bg-offwhite-200 border-b border-charcoal-900/10 font-sans">
       <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-4 md:mb-6 block">Siap Memulai?</span>
-        <h2 className="text-2xl md:text-5xl font-light mb-6 md:mb-8 text-charcoal-900 tracking-tight leading-tight">Bangun Infrastruktur Digital Anda.</h2>
+        <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-4 md:mb-6 block">Mulai dari Obrolan Santai</span>
+        <h2 className="text-2xl md:text-5xl font-light mb-6 md:mb-8 text-charcoal-900 tracking-tight leading-tight">Bingung Mulai dari Mana? Ceritakan Saja.</h2>
         <p className="text-sm md:text-lg text-charcoal-700 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
-          Wujudkan sistem perangkat lunak yang stabil dan siap mendukung pertumbuhan bisnis Anda. Jadwalkan pertemuan dengan tim arsitek kami untuk diskusi lebih lanjut.
+          Ceritakan kebutuhan bisnis Anda lewat WhatsApp. Kami dengarkan dulu, lalu bantu mencari langkah teknologi yang paling masuk akal.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://wa.me/6285117306806?text=Halo%20BKTech%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pembuatan%20website%20untuk%20bisnis%20saya.%20Mohon%20informasi%20lebih%20lanjut." target="_blank" rel="noopener noreferrer" className="bg-charcoal-900 hover:bg-charcoal-800 text-white px-8 md:px-10 py-4 md:py-5 font-medium text-xs md:text-sm transition-all shadow-sm uppercase tracking-widest">
-            Jadwalkan Konsultasi
+          <a href="https://wa.me/6285117306806?text=Halo%20BKTech%2C%20saya%20ingin%20ngobrol%20soal%20teknologi%20yang%20cocok%20untuk%20bisnis%20saya." target="_blank" rel="noopener noreferrer" className="bg-charcoal-900 hover:bg-charcoal-800 text-white px-8 md:px-10 py-4 md:py-5 font-medium text-xs md:text-sm transition-all shadow-sm uppercase tracking-widest">
+            Konsultasi via WhatsApp
           </a>
           <button className="bg-white border border-charcoal-900/10 hover:border-charcoal-900/30 text-charcoal-900 px-8 md:px-10 py-4 md:py-5 font-medium text-xs md:text-sm transition-all focus:outline-none shadow-sm uppercase tracking-widest">
             Hubungi Kami

@@ -24,22 +24,22 @@ export function Hero() {
         <motion.div variants={fadeUp} className="flex items-center gap-4 mb-3 md:mb-8">
           <div className="h-px w-8 bg-terracotta"></div>
           <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold">
-            West Sumatra Digital Foundry
+            Technology Advisor · Sumatera Barat
           </span>
         </motion.div>
 
         <motion.h1 variants={fadeUp} className="text-2xl md:text-5xl lg:text-6xl font-light leading-[1.15] md:leading-[1.15] mb-3 md:mb-8 text-charcoal-900 tracking-tight">
-          <strong className="font-semibold text-charcoal-900">Dibangun dengan Presisi.</strong> <br />
-          Arsitektur Digital Tangguh untuk Bisnis yang Siap Melesat
+          <strong className="font-semibold text-charcoal-900">Teknologi Itu Tak Harus Rumit.</strong> <br />
+          Kami Bantu Pilih yang Pas untuk Bisnis Anda
         </motion.h1>
 
         <motion.p variants={fadeUp} className="text-sm md:text-lg text-charcoal-700 leading-relaxed mb-4 md:mb-12 max-w-lg">
-          Memadukan standar engineering papan atas dengan pemahaman mendalam terhadap lanskap lokal. Kami membangun produk digital yang efisien, adaptif, dan siap berkembang bersama bisnis Anda.
+          BKTech adalah Technology Advisor untuk bisnis di Sumatera Barat. Kami dengarkan dulu kebutuhan Anda, bantu memilih solusi yang masuk akal, lalu membangunnya bersama sampai benar-benar dipakai tim Anda.
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 md:gap-5">
           <button className="bg-terracotta hover:bg-terracotta-hover text-white px-7 md:px-8 py-3 md:py-4 font-medium text-xs md:text-sm transition-all flex items-center justify-center gap-3 font-sans">
-            Jelajahi Layanan
+            Lihat Layanan
             <ArrowRight size={16} />
           </button>
           <button className="bg-transparent border border-charcoal-900/20 text-charcoal-900 hover:border-charcoal-900 px-7 md:px-8 py-3 md:py-4 font-medium text-xs md:text-sm transition-all flex items-center justify-center font-sans">
@@ -59,7 +59,7 @@ export function Hero() {
         <div className="songket-border-left songket-border-top relative w-full h-full bg-charcoal-800 z-10 overflow-hidden shadow-2xl">
           <Image
             src="/bukittinggi_workspace.png"
-            alt="Modern Software Engineer Workspace in Bukittinggi"
+            alt="Ruang kerja tim teknologi BKTech di Bukittinggi"
             fill
             priority
             sizes="(max-width: 768px) 100vw, 50vw"

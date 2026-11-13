@@ -20,7 +20,7 @@ export function Services() {
             <div className="max-w-2xl">
               <span className="uppercase tracking-widest text-terracotta text-[10px] md:text-xs font-semibold mb-3 md:mb-4 block">Layanan Kami</span>
               <h2 className="text-2xl md:text-5xl font-light text-charcoal-900 leading-tight">
-                <strong className="font-semibold">Solusi Digital</strong> yang Dirancang untuk Bisnis Anda.
+                <strong className="font-semibold">Teman Diskusi Teknologi</strong> untuk Bisnis Anda.
               </h2>
             </div>
           </div>
@@ -30,36 +30,36 @@ export function Services() {
             className="grid lg:grid-cols-2 gap-8"
           >
             <StructuralCard
+              icon={<UserCheck strokeWidth={1} size={32} />}
+              title="Konsultasi & Modernisasi Sistem"
+              desc="Belum tahu harus mulai dari mana? Kami bantu memetakan kebutuhan, menimbang pilihan, dan memeriksa sistem lama Anda supaya langkah berikutnya jelas dan aman."
+            />
+            <StructuralCard
               icon={<Code strokeWidth={1} size={32} />}
-              title="Pengembangan Perangkat Lunak Kustom"
-              desc="Aplikasi web dan mobile yang dirancang khusus untuk kebutuhan bisnis Anda. Dibangun dari awal untuk menangani alur kerja kompleks dan volume data tinggi."
+              title="Website & Aplikasi Sesuai Kebutuhan"
+              desc="Web dan mobile yang dibuat khusus untuk cara kerja bisnis Anda, dari alur sederhana sampai yang rumit."
             />
             <StructuralCard
               icon={<ShieldCheck strokeWidth={1} size={32} />}
-              title="Sistem Manajemen Otomatis"
-              desc="Digitalisasi proses dari Point of Sales (POS) hingga manajemen rantai pasok. Dilengkapi analitik lengkap untuk membantu UMKM memantau kinerja dan audit dengan akurat."
+              title="Sistem Operasional Bisnis"
+              desc="Dari kasir (POS) sampai stok dan rantai pasok. Semuanya tercatat rapi, jadi Anda bisa memantau usaha dengan tenang."
             />
             <StructuralCard
               icon={<Smartphone strokeWidth={1} size={32} />}
-              title="Portal Pariwisata Interaktif"
-              desc="Platform digital berperforma tinggi untuk industri wisata dan perhotelan Sumatera Barat, dengan standar antarmuka yang siap bersaing di tingkat global."
-            />
-            <StructuralCard
-              icon={<UserCheck strokeWidth={1} size={32} />}
-              title="Konsultasi & Modernisasi Sistem"
-              desc="Audit kode dan modernisasi infrastruktur existing untuk memastikan aplikasi Anda berjalan lancar, mudah dikembangkan, dan bebas dari celah keamanan."
+              title="Portal Pariwisata & Perhotelan"
+              desc="Situs dan platform untuk pelaku wisata dan hotel di Sumatera Barat, tampil menarik dan nyaman dipakai tamu dari mana saja."
             />
           </motion.div>
 
           <div className="mt-10 md:mt-12 pt-8 border-t border-charcoal-900/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <p className="text-sm text-charcoal-600 max-w-lg">
-              Ingin tahu lebih detail soal jasa pembuatan website dan aplikasi mobile untuk bisnis Anda di Sumatera Barat?
+              Penasaran cara memilih jasa pembuatan website yang tepat di Sumatera Barat?
             </p>
             <Link
               href="/blog/tips-memilih-jasa-pembuatan-website-di-sumatera-barat"
               className="inline-flex items-center gap-2 text-terracotta hover:text-terracotta-hover transition-colors text-sm font-semibold uppercase tracking-wider shrink-0"
             >
-              Baca Panduan di Blog <ArrowUpRight size={18} />
+              Baca Panduannya <ArrowUpRight size={18} />
             </Link>
           </div>
         </div>

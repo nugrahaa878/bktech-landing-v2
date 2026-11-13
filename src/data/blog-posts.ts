@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Di sinilah jasa pembuatan website Bukittinggi menjadi kebutuhan, bukan sekadar pelengkap. BKTech hadir sebagai software house lokal Sumatera Barat yang memahami karakter bisnis di Bukittinggi — mulai dari usaha kuliner khas, penginapan, hingga jasa wisata — dan menerjemahkannya menjadi website yang cepat, mudah ditemukan, dan mampu mengonversi pengunjung menjadi pelanggan. Berbeda dari layanan yang hanya menempelkan nama kota ke template generik, setiap website yang kami kerjakan disusun dari kebutuhan bisnis yang sesungguhnya, bukan sekadar mengganti nama lokasi di halaman yang sama untuk semua kota.",
+        text: "Di sinilah jasa pembuatan website Bukittinggi menjadi kebutuhan, bukan sekadar pelengkap. BKTech hadir sebagai technology advisor lokal Sumatera Barat yang memahami karakter bisnis di Bukittinggi — mulai dari usaha kuliner khas, penginapan, hingga jasa wisata — dan menerjemahkannya menjadi website yang cepat, mudah ditemukan, dan mampu mengonversi pengunjung menjadi pelanggan. Berbeda dari layanan yang hanya menempelkan nama kota ke template generik, setiap website yang kami kerjakan disusun dari kebutuhan bisnis yang sesungguhnya, bukan sekadar mengganti nama lokasi di halaman yang sama untuk semua kota.",
       },
       {
         type: "heading",
@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: "Apakah BKTech bisa bertemu langsung dengan klien di Bukittinggi?",
         answer:
-          "Bisa. Sebagai software house berbasis Sumatera Barat, tim kami dapat mengatur pertemuan langsung untuk diskusi kebutuhan, tidak hanya melalui komunikasi jarak jauh.",
+          "Bisa. Sebagai technology advisor berbasis Sumatera Barat, tim kami dapat mengatur pertemuan langsung untuk diskusi kebutuhan, tidak hanya melalui komunikasi jarak jauh.",
       },
       {
         question: "Apakah website yang dibuat bisa dikelola sendiri setelah selesai?",
@@ -226,7 +226,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Sebagai software house yang berbasis di Sumatera Barat, kami memahami konteks pasar lokal — mulai dari kebiasaan konsumen hingga tren pencarian daerah. Kami juga menerapkan praktik SEO teknis dasar pada setiap website yang dibangun, termasuk struktur URL yang bersih, kecepatan muat halaman, dan metadata yang relevan, sehingga website klien punya fondasi kuat untuk bersaing di hasil pencarian.",
+        text: "Sebagai technology advisor yang berbasis di Sumatera Barat, kami memahami konteks pasar lokal — mulai dari kebiasaan konsumen hingga tren pencarian daerah. Kami juga menerapkan praktik SEO teknis dasar pada setiap website yang dibangun, termasuk struktur URL yang bersih, kecepatan muat halaman, dan metadata yang relevan, sehingga website klien punya fondasi kuat untuk bersaing di hasil pencarian.",
       },
       {
         type: "paragraph",
@@ -888,7 +888,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "BKTech memenuhi ketujuh kriteria di atas sebagai software house yang berbasis di Sumatera Barat, melayani klien di Padang, Bukittinggi, Payakumbuh, Padang Panjang, Solok, Pariaman, Batusangkar, dan sekitarnya. Kami membangun website dengan pendekatan teknis yang presisi sekaligus memahami konteks bisnis lokal. Hubungi kami untuk konsultasi kebutuhan website Anda.",
+        text: "BKTech memenuhi ketujuh kriteria di atas sebagai technology advisor yang berbasis di Sumatera Barat, melayani klien di Padang, Bukittinggi, Payakumbuh, Padang Panjang, Solok, Pariaman, Batusangkar, dan sekitarnya. Kami membangun website dengan pendekatan teknis yang rapi sekaligus memahami konteks bisnis lokal. Hubungi kami untuk konsultasi kebutuhan website Anda.",
       },
     ],
     faq: [
@@ -1048,7 +1048,7 @@ const appPosts: BlogPost[] = [
       {
         type: "heading",
         level: 2,
-        text: "Pendekatan Teknis yang Presisi",
+        text: "Pendekatan Teknis yang Rapi",
       },
       {
         type: "paragraph",
@@ -1065,7 +1065,7 @@ const appPosts: BlogPost[] = [
       },
       {
         type: "paragraph",
-        text: "Bekerja dengan tim lokal memudahkan komunikasi langsung, diskusi kebutuhan yang lebih cepat dipahami, dan dukungan purnajual yang lebih responsif dibanding vendor luar kota. BKTech, sebagai software house berbasis Sumatera Barat, memahami konteks pasar dan kebutuhan bisnis di Padang secara langsung.",
+        text: "Bekerja dengan tim lokal memudahkan komunikasi langsung, diskusi kebutuhan yang lebih cepat dipahami, dan dukungan purnajual yang lebih responsif dibanding vendor luar kota. BKTech, sebagai technology advisor berbasis Sumatera Barat, memahami konteks pasar dan kebutuhan bisnis di Padang secara langsung.",
       },
       {
         type: "heading",

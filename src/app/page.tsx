@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  description: "BKTech menghadirkan solusi rekayasa perangkat lunak untuk transformasi digital di Sumatera Barat, mulai dari UMKM hingga industri pariwisata.",
+  description: "BKTech adalah Technology Advisor di Sumatera Barat. Kami bantu bisnis, dari UMKM sampai pariwisata, memilih dan membangun solusi digital yang tepat.",
   alternates: { canonical: "/" },
 };
 
